@@ -187,10 +187,6 @@ public final class MessageProtocol {
 
     public final com.google.protobuf.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalStateException(
-            "Can't get the descriptor of an unrecognized enum value.");
-      }
       return getDescriptor().getValues().get(ordinal());
     }
     public final com.google.protobuf.Descriptors.EnumDescriptor
@@ -269,7 +265,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserEntryCmd}
    */
-  public static final class UserEntryCmd extends
+  public  static final class UserEntryCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserEntryCmd)
       UserEntryCmdOrBuilder {
@@ -365,7 +361,6 @@ public final class MessageProtocol {
      * <code>uint32 userId = 1;</code>
      * @return The userId.
      */
-    @java.lang.Override
     public int getUserId() {
       return userId_;
     }
@@ -380,13 +375,12 @@ public final class MessageProtocol {
      * <code>string heroAvatar = 2;</code>
      * @return The heroAvatar.
      */
-    @java.lang.Override
     public java.lang.String getHeroAvatar() {
       java.lang.Object ref = heroAvatar_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         heroAvatar_ = s;
@@ -401,12 +395,11 @@ public final class MessageProtocol {
      * <code>string heroAvatar = 2;</code>
      * @return The bytes for heroAvatar.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getHeroAvatarBytes() {
       java.lang.Object ref = heroAvatar_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         heroAvatar_ = b;
@@ -608,7 +601,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserEntryCmd.class, MessageProtocol.UserEntryCmd.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserEntryCmd.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserEntryCmd.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -751,7 +744,6 @@ public final class MessageProtocol {
        * <code>uint32 userId = 1;</code>
        * @return The userId.
        */
-      @java.lang.Override
       public int getUserId() {
         return userId_;
       }
@@ -765,7 +757,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setUserId(int value) {
-
+        
         userId_ = value;
         onChanged();
         return this;
@@ -779,7 +771,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-
+        
         userId_ = 0;
         onChanged();
         return this;
@@ -818,7 +810,7 @@ public final class MessageProtocol {
           getHeroAvatarBytes() {
         java.lang.Object ref = heroAvatar_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           heroAvatar_ = b;
@@ -841,7 +833,7 @@ public final class MessageProtocol {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         heroAvatar_ = value;
         onChanged();
         return this;
@@ -855,7 +847,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearHeroAvatar() {
-
+        
         heroAvatar_ = getDefaultInstance().getHeroAvatar();
         onChanged();
         return this;
@@ -875,7 +867,7 @@ public final class MessageProtocol {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         heroAvatar_ = value;
         onChanged();
         return this;
@@ -974,7 +966,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserEntryResult}
    */
-  public static final class UserEntryResult extends
+  public  static final class UserEntryResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserEntryResult)
       UserEntryResultOrBuilder {
@@ -1070,7 +1062,6 @@ public final class MessageProtocol {
      * <code>uint32 userId = 1;</code>
      * @return The userId.
      */
-    @java.lang.Override
     public int getUserId() {
       return userId_;
     }
@@ -1085,13 +1076,12 @@ public final class MessageProtocol {
      * <code>string heroAvatar = 2;</code>
      * @return The heroAvatar.
      */
-    @java.lang.Override
     public java.lang.String getHeroAvatar() {
       java.lang.Object ref = heroAvatar_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
+        com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
         heroAvatar_ = s;
@@ -1106,12 +1096,11 @@ public final class MessageProtocol {
      * <code>string heroAvatar = 2;</code>
      * @return The bytes for heroAvatar.
      */
-    @java.lang.Override
     public com.google.protobuf.ByteString
         getHeroAvatarBytes() {
       java.lang.Object ref = heroAvatar_;
       if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b =
+        com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
         heroAvatar_ = b;
@@ -1310,7 +1299,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserEntryResult.class, MessageProtocol.UserEntryResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserEntryResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserEntryResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1453,7 +1442,6 @@ public final class MessageProtocol {
        * <code>uint32 userId = 1;</code>
        * @return The userId.
        */
-      @java.lang.Override
       public int getUserId() {
         return userId_;
       }
@@ -1467,7 +1455,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setUserId(int value) {
-
+        
         userId_ = value;
         onChanged();
         return this;
@@ -1481,7 +1469,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearUserId() {
-
+        
         userId_ = 0;
         onChanged();
         return this;
@@ -1520,7 +1508,7 @@ public final class MessageProtocol {
           getHeroAvatarBytes() {
         java.lang.Object ref = heroAvatar_;
         if (ref instanceof String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           heroAvatar_ = b;
@@ -1543,7 +1531,7 @@ public final class MessageProtocol {
         if (value == null) {
     throw new NullPointerException();
   }
-
+  
         heroAvatar_ = value;
         onChanged();
         return this;
@@ -1557,7 +1545,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearHeroAvatar() {
-
+        
         heroAvatar_ = getDefaultInstance().getHeroAvatar();
         onChanged();
         return this;
@@ -1577,7 +1565,7 @@ public final class MessageProtocol {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+        
         heroAvatar_ = value;
         onChanged();
         return this;
@@ -1649,7 +1637,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.WhoElseIsHereCmd}
    */
-  public static final class WhoElseIsHereCmd extends
+  public  static final class WhoElseIsHereCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.WhoElseIsHereCmd)
       WhoElseIsHereCmdOrBuilder {
@@ -1894,7 +1882,7 @@ public final class MessageProtocol {
                 MessageProtocol.WhoElseIsHereCmd.class, MessageProtocol.WhoElseIsHereCmd.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.WhoElseIsHereCmd.newBuilder()
+      // Construct using cat.wars.model.Protocol.WhoElseIsHereCmd.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -2122,7 +2110,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.WhoElseIsHereResult}
    */
-  public static final class WhoElseIsHereResult extends
+  public  static final class WhoElseIsHereResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.WhoElseIsHereResult)
       WhoElseIsHereResultOrBuilder {
@@ -2243,6 +2231,33 @@ public final class MessageProtocol {
        */
       com.google.protobuf.ByteString
           getHeroAvatarBytes();
+
+      /**
+       * <pre>
+       * 移动状态
+       * </pre>
+       *
+       * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+       * @return Whether the moveState field is set.
+       */
+      boolean hasMoveState();
+      /**
+       * <pre>
+       * 移动状态
+       * </pre>
+       *
+       * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+       * @return The moveState.
+       */
+      MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState getMoveState();
+      /**
+       * <pre>
+       * 移动状态
+       * </pre>
+       *
+       * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+       */
+      MessageProtocol.WhoElseIsHereResult.UserInfo.MoveStateOrBuilder getMoveStateOrBuilder();
     }
     /**
      * <pre>
@@ -2251,7 +2266,7 @@ public final class MessageProtocol {
      *
      * Protobuf type {@code msg.WhoElseIsHereResult.UserInfo}
      */
-    public static final class UserInfo extends
+    public  static final class UserInfo extends
         com.google.protobuf.GeneratedMessageV3 implements
         // @@protoc_insertion_point(message_implements:msg.WhoElseIsHereResult.UserInfo)
         UserInfoOrBuilder {
@@ -2305,6 +2320,19 @@ public final class MessageProtocol {
                 heroAvatar_ = s;
                 break;
               }
+              case 26: {
+                MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder subBuilder = null;
+                if (moveState_ != null) {
+                  subBuilder = moveState_.toBuilder();
+                }
+                moveState_ = input.readMessage(MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.parser(), extensionRegistry);
+                if (subBuilder != null) {
+                  subBuilder.mergeFrom(moveState_);
+                  moveState_ = subBuilder.buildPartial();
+                }
+
+                break;
+              }
               default: {
                 if (!parseUnknownField(
                     input, unknownFields, extensionRegistry, tag)) {
@@ -2337,6 +2365,881 @@ public final class MessageProtocol {
                 MessageProtocol.WhoElseIsHereResult.UserInfo.class, MessageProtocol.WhoElseIsHereResult.UserInfo.Builder.class);
       }
 
+      public interface MoveStateOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:msg.WhoElseIsHereResult.UserInfo.MoveState)
+          com.google.protobuf.MessageOrBuilder {
+
+        /**
+         * <pre>
+         * 起始位置 X
+         * </pre>
+         *
+         * <code>float fromPosX = 1;</code>
+         * @return The fromPosX.
+         */
+        float getFromPosX();
+
+        /**
+         * <pre>
+         * 起始位置 Y
+         * </pre>
+         *
+         * <code>float fromPosY = 2;</code>
+         * @return The fromPosY.
+         */
+        float getFromPosY();
+
+        /**
+         * <pre>
+         * 移动到位置 X
+         * </pre>
+         *
+         * <code>float toPosX = 3;</code>
+         * @return The toPosX.
+         */
+        float getToPosX();
+
+        /**
+         * <pre>
+         * 移动到位置 Y
+         * </pre>
+         *
+         * <code>float toPosY = 4;</code>
+         * @return The toPosY.
+         */
+        float getToPosY();
+
+        /**
+         * <pre>
+         * 启程时间戳
+         * </pre>
+         *
+         * <code>uint64 startTime = 5;</code>
+         * @return The startTime.
+         */
+        long getStartTime();
+      }
+      /**
+       * <pre>
+       * 移动状态
+       * </pre>
+       *
+       * Protobuf type {@code msg.WhoElseIsHereResult.UserInfo.MoveState}
+       */
+      public  static final class MoveState extends
+          com.google.protobuf.GeneratedMessageV3 implements
+          // @@protoc_insertion_point(message_implements:msg.WhoElseIsHereResult.UserInfo.MoveState)
+          MoveStateOrBuilder {
+      private static final long serialVersionUID = 0L;
+        // Use MoveState.newBuilder() to construct.
+        private MoveState(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+          super(builder);
+        }
+        private MoveState() {
+        }
+
+        @java.lang.Override
+        @SuppressWarnings({"unused"})
+        protected java.lang.Object newInstance(
+            UnusedPrivateParameter unused) {
+          return new MoveState();
+        }
+
+        @java.lang.Override
+        public final com.google.protobuf.UnknownFieldSet
+        getUnknownFields() {
+          return this.unknownFields;
+        }
+        private MoveState(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          this();
+          if (extensionRegistry == null) {
+            throw new java.lang.NullPointerException();
+          }
+          com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+              com.google.protobuf.UnknownFieldSet.newBuilder();
+          try {
+            boolean done = false;
+            while (!done) {
+              int tag = input.readTag();
+              switch (tag) {
+                case 0:
+                  done = true;
+                  break;
+                case 13: {
+
+                  fromPosX_ = input.readFloat();
+                  break;
+                }
+                case 21: {
+
+                  fromPosY_ = input.readFloat();
+                  break;
+                }
+                case 29: {
+
+                  toPosX_ = input.readFloat();
+                  break;
+                }
+                case 37: {
+
+                  toPosY_ = input.readFloat();
+                  break;
+                }
+                case 40: {
+
+                  startTime_ = input.readUInt64();
+                  break;
+                }
+                default: {
+                  if (!parseUnknownField(
+                      input, unknownFields, extensionRegistry, tag)) {
+                    done = true;
+                  }
+                  break;
+                }
+              }
+            }
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(this);
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(
+                e).setUnfinishedMessage(this);
+          } finally {
+            this.unknownFields = unknownFields.build();
+            makeExtensionsImmutable();
+          }
+        }
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return MessageProtocol.internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return MessageProtocol.internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.class, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder.class);
+        }
+
+        public static final int FROMPOSX_FIELD_NUMBER = 1;
+        private float fromPosX_;
+        /**
+         * <pre>
+         * 起始位置 X
+         * </pre>
+         *
+         * <code>float fromPosX = 1;</code>
+         * @return The fromPosX.
+         */
+        public float getFromPosX() {
+          return fromPosX_;
+        }
+
+        public static final int FROMPOSY_FIELD_NUMBER = 2;
+        private float fromPosY_;
+        /**
+         * <pre>
+         * 起始位置 Y
+         * </pre>
+         *
+         * <code>float fromPosY = 2;</code>
+         * @return The fromPosY.
+         */
+        public float getFromPosY() {
+          return fromPosY_;
+        }
+
+        public static final int TOPOSX_FIELD_NUMBER = 3;
+        private float toPosX_;
+        /**
+         * <pre>
+         * 移动到位置 X
+         * </pre>
+         *
+         * <code>float toPosX = 3;</code>
+         * @return The toPosX.
+         */
+        public float getToPosX() {
+          return toPosX_;
+        }
+
+        public static final int TOPOSY_FIELD_NUMBER = 4;
+        private float toPosY_;
+        /**
+         * <pre>
+         * 移动到位置 Y
+         * </pre>
+         *
+         * <code>float toPosY = 4;</code>
+         * @return The toPosY.
+         */
+        public float getToPosY() {
+          return toPosY_;
+        }
+
+        public static final int STARTTIME_FIELD_NUMBER = 5;
+        private long startTime_;
+        /**
+         * <pre>
+         * 启程时间戳
+         * </pre>
+         *
+         * <code>uint64 startTime = 5;</code>
+         * @return The startTime.
+         */
+        public long getStartTime() {
+          return startTime_;
+        }
+
+        private byte memoizedIsInitialized = -1;
+        @java.lang.Override
+        public final boolean isInitialized() {
+          byte isInitialized = memoizedIsInitialized;
+          if (isInitialized == 1) return true;
+          if (isInitialized == 0) return false;
+
+          memoizedIsInitialized = 1;
+          return true;
+        }
+
+        @java.lang.Override
+        public void writeTo(com.google.protobuf.CodedOutputStream output)
+                            throws java.io.IOException {
+          if (fromPosX_ != 0F) {
+            output.writeFloat(1, fromPosX_);
+          }
+          if (fromPosY_ != 0F) {
+            output.writeFloat(2, fromPosY_);
+          }
+          if (toPosX_ != 0F) {
+            output.writeFloat(3, toPosX_);
+          }
+          if (toPosY_ != 0F) {
+            output.writeFloat(4, toPosY_);
+          }
+          if (startTime_ != 0L) {
+            output.writeUInt64(5, startTime_);
+          }
+          unknownFields.writeTo(output);
+        }
+
+        @java.lang.Override
+        public int getSerializedSize() {
+          int size = memoizedSize;
+          if (size != -1) return size;
+
+          size = 0;
+          if (fromPosX_ != 0F) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeFloatSize(1, fromPosX_);
+          }
+          if (fromPosY_ != 0F) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeFloatSize(2, fromPosY_);
+          }
+          if (toPosX_ != 0F) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeFloatSize(3, toPosX_);
+          }
+          if (toPosY_ != 0F) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeFloatSize(4, toPosY_);
+          }
+          if (startTime_ != 0L) {
+            size += com.google.protobuf.CodedOutputStream
+              .computeUInt64Size(5, startTime_);
+          }
+          size += unknownFields.getSerializedSize();
+          memoizedSize = size;
+          return size;
+        }
+
+        @java.lang.Override
+        public boolean equals(final java.lang.Object obj) {
+          if (obj == this) {
+           return true;
+          }
+          if (!(obj instanceof MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState)) {
+            return super.equals(obj);
+          }
+          MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState other = (MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState) obj;
+
+          if (java.lang.Float.floatToIntBits(getFromPosX())
+              != java.lang.Float.floatToIntBits(
+                  other.getFromPosX())) return false;
+          if (java.lang.Float.floatToIntBits(getFromPosY())
+              != java.lang.Float.floatToIntBits(
+                  other.getFromPosY())) return false;
+          if (java.lang.Float.floatToIntBits(getToPosX())
+              != java.lang.Float.floatToIntBits(
+                  other.getToPosX())) return false;
+          if (java.lang.Float.floatToIntBits(getToPosY())
+              != java.lang.Float.floatToIntBits(
+                  other.getToPosY())) return false;
+          if (getStartTime()
+              != other.getStartTime()) return false;
+          if (!unknownFields.equals(other.unknownFields)) return false;
+          return true;
+        }
+
+        @java.lang.Override
+        public int hashCode() {
+          if (memoizedHashCode != 0) {
+            return memoizedHashCode;
+          }
+          int hash = 41;
+          hash = (19 * hash) + getDescriptor().hashCode();
+          hash = (37 * hash) + FROMPOSX_FIELD_NUMBER;
+          hash = (53 * hash) + java.lang.Float.floatToIntBits(
+              getFromPosX());
+          hash = (37 * hash) + FROMPOSY_FIELD_NUMBER;
+          hash = (53 * hash) + java.lang.Float.floatToIntBits(
+              getFromPosY());
+          hash = (37 * hash) + TOPOSX_FIELD_NUMBER;
+          hash = (53 * hash) + java.lang.Float.floatToIntBits(
+              getToPosX());
+          hash = (37 * hash) + TOPOSY_FIELD_NUMBER;
+          hash = (53 * hash) + java.lang.Float.floatToIntBits(
+              getToPosY());
+          hash = (37 * hash) + STARTTIME_FIELD_NUMBER;
+          hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+              getStartTime());
+          hash = (29 * hash) + unknownFields.hashCode();
+          memoizedHashCode = hash;
+          return hash;
+        }
+
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            java.nio.ByteBuffer data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            java.nio.ByteBuffer data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            com.google.protobuf.ByteString data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            com.google.protobuf.ByteString data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(byte[] data)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            byte[] data,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return PARSER.parseFrom(data, extensionRegistry);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseDelimitedFrom(java.io.InputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseDelimitedFrom(
+            java.io.InputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            com.google.protobuf.CodedInputStream input)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input);
+        }
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parseFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          return com.google.protobuf.GeneratedMessageV3
+              .parseWithIOException(PARSER, input, extensionRegistry);
+        }
+
+        @java.lang.Override
+        public Builder newBuilderForType() { return newBuilder(); }
+        public static Builder newBuilder() {
+          return DEFAULT_INSTANCE.toBuilder();
+        }
+        public static Builder newBuilder(MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState prototype) {
+          return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+        }
+        @java.lang.Override
+        public Builder toBuilder() {
+          return this == DEFAULT_INSTANCE
+              ? new Builder() : new Builder().mergeFrom(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          Builder builder = new Builder(parent);
+          return builder;
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * Protobuf type {@code msg.WhoElseIsHereResult.UserInfo.MoveState}
+         */
+        public static final class Builder extends
+            com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+            // @@protoc_insertion_point(builder_implements:msg.WhoElseIsHereResult.UserInfo.MoveState)
+            MessageProtocol.WhoElseIsHereResult.UserInfo.MoveStateOrBuilder {
+          public static final com.google.protobuf.Descriptors.Descriptor
+              getDescriptor() {
+            return MessageProtocol.internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_descriptor;
+          }
+
+          @java.lang.Override
+          protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+              internalGetFieldAccessorTable() {
+            return MessageProtocol.internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_fieldAccessorTable
+                .ensureFieldAccessorsInitialized(
+                    MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.class, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder.class);
+          }
+
+          // Construct using cat.wars.model.Protocol.WhoElseIsHereResult.UserInfo.MoveState.newBuilder()
+          private Builder() {
+            maybeForceBuilderInitialization();
+          }
+
+          private Builder(
+              com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+            super(parent);
+            maybeForceBuilderInitialization();
+          }
+          private void maybeForceBuilderInitialization() {
+            if (com.google.protobuf.GeneratedMessageV3
+                    .alwaysUseFieldBuilders) {
+            }
+          }
+          @java.lang.Override
+          public Builder clear() {
+            super.clear();
+            fromPosX_ = 0F;
+
+            fromPosY_ = 0F;
+
+            toPosX_ = 0F;
+
+            toPosY_ = 0F;
+
+            startTime_ = 0L;
+
+            return this;
+          }
+
+          @java.lang.Override
+          public com.google.protobuf.Descriptors.Descriptor
+              getDescriptorForType() {
+            return MessageProtocol.internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_descriptor;
+          }
+
+          @java.lang.Override
+          public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState getDefaultInstanceForType() {
+            return MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.getDefaultInstance();
+          }
+
+          @java.lang.Override
+          public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState build() {
+            MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState result = buildPartial();
+            if (!result.isInitialized()) {
+              throw newUninitializedMessageException(result);
+            }
+            return result;
+          }
+
+          @java.lang.Override
+          public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState buildPartial() {
+            MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState result = new MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState(this);
+            result.fromPosX_ = fromPosX_;
+            result.fromPosY_ = fromPosY_;
+            result.toPosX_ = toPosX_;
+            result.toPosY_ = toPosY_;
+            result.startTime_ = startTime_;
+            onBuilt();
+            return result;
+          }
+
+          @java.lang.Override
+          public Builder clone() {
+            return super.clone();
+          }
+          @java.lang.Override
+          public Builder setField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.setField(field, value);
+          }
+          @java.lang.Override
+          public Builder clearField(
+              com.google.protobuf.Descriptors.FieldDescriptor field) {
+            return super.clearField(field);
+          }
+          @java.lang.Override
+          public Builder clearOneof(
+              com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+            return super.clearOneof(oneof);
+          }
+          @java.lang.Override
+          public Builder setRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              int index, java.lang.Object value) {
+            return super.setRepeatedField(field, index, value);
+          }
+          @java.lang.Override
+          public Builder addRepeatedField(
+              com.google.protobuf.Descriptors.FieldDescriptor field,
+              java.lang.Object value) {
+            return super.addRepeatedField(field, value);
+          }
+          @java.lang.Override
+          public Builder mergeFrom(com.google.protobuf.Message other) {
+            if (other instanceof MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState) {
+              return mergeFrom((MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState)other);
+            } else {
+              super.mergeFrom(other);
+              return this;
+            }
+          }
+
+          public Builder mergeFrom(MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState other) {
+            if (other == MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.getDefaultInstance()) return this;
+            if (other.getFromPosX() != 0F) {
+              setFromPosX(other.getFromPosX());
+            }
+            if (other.getFromPosY() != 0F) {
+              setFromPosY(other.getFromPosY());
+            }
+            if (other.getToPosX() != 0F) {
+              setToPosX(other.getToPosX());
+            }
+            if (other.getToPosY() != 0F) {
+              setToPosY(other.getToPosY());
+            }
+            if (other.getStartTime() != 0L) {
+              setStartTime(other.getStartTime());
+            }
+            this.mergeUnknownFields(other.unknownFields);
+            onChanged();
+            return this;
+          }
+
+          @java.lang.Override
+          public final boolean isInitialized() {
+            return true;
+          }
+
+          @java.lang.Override
+          public Builder mergeFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws java.io.IOException {
+            MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState parsedMessage = null;
+            try {
+              parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              parsedMessage = (MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState) e.getUnfinishedMessage();
+              throw e.unwrapIOException();
+            } finally {
+              if (parsedMessage != null) {
+                mergeFrom(parsedMessage);
+              }
+            }
+            return this;
+          }
+
+          private float fromPosX_ ;
+          /**
+           * <pre>
+           * 起始位置 X
+           * </pre>
+           *
+           * <code>float fromPosX = 1;</code>
+           * @return The fromPosX.
+           */
+          public float getFromPosX() {
+            return fromPosX_;
+          }
+          /**
+           * <pre>
+           * 起始位置 X
+           * </pre>
+           *
+           * <code>float fromPosX = 1;</code>
+           * @param value The fromPosX to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFromPosX(float value) {
+            
+            fromPosX_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * 起始位置 X
+           * </pre>
+           *
+           * <code>float fromPosX = 1;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearFromPosX() {
+            
+            fromPosX_ = 0F;
+            onChanged();
+            return this;
+          }
+
+          private float fromPosY_ ;
+          /**
+           * <pre>
+           * 起始位置 Y
+           * </pre>
+           *
+           * <code>float fromPosY = 2;</code>
+           * @return The fromPosY.
+           */
+          public float getFromPosY() {
+            return fromPosY_;
+          }
+          /**
+           * <pre>
+           * 起始位置 Y
+           * </pre>
+           *
+           * <code>float fromPosY = 2;</code>
+           * @param value The fromPosY to set.
+           * @return This builder for chaining.
+           */
+          public Builder setFromPosY(float value) {
+            
+            fromPosY_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * 起始位置 Y
+           * </pre>
+           *
+           * <code>float fromPosY = 2;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearFromPosY() {
+            
+            fromPosY_ = 0F;
+            onChanged();
+            return this;
+          }
+
+          private float toPosX_ ;
+          /**
+           * <pre>
+           * 移动到位置 X
+           * </pre>
+           *
+           * <code>float toPosX = 3;</code>
+           * @return The toPosX.
+           */
+          public float getToPosX() {
+            return toPosX_;
+          }
+          /**
+           * <pre>
+           * 移动到位置 X
+           * </pre>
+           *
+           * <code>float toPosX = 3;</code>
+           * @param value The toPosX to set.
+           * @return This builder for chaining.
+           */
+          public Builder setToPosX(float value) {
+            
+            toPosX_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * 移动到位置 X
+           * </pre>
+           *
+           * <code>float toPosX = 3;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearToPosX() {
+            
+            toPosX_ = 0F;
+            onChanged();
+            return this;
+          }
+
+          private float toPosY_ ;
+          /**
+           * <pre>
+           * 移动到位置 Y
+           * </pre>
+           *
+           * <code>float toPosY = 4;</code>
+           * @return The toPosY.
+           */
+          public float getToPosY() {
+            return toPosY_;
+          }
+          /**
+           * <pre>
+           * 移动到位置 Y
+           * </pre>
+           *
+           * <code>float toPosY = 4;</code>
+           * @param value The toPosY to set.
+           * @return This builder for chaining.
+           */
+          public Builder setToPosY(float value) {
+            
+            toPosY_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * 移动到位置 Y
+           * </pre>
+           *
+           * <code>float toPosY = 4;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearToPosY() {
+            
+            toPosY_ = 0F;
+            onChanged();
+            return this;
+          }
+
+          private long startTime_ ;
+          /**
+           * <pre>
+           * 启程时间戳
+           * </pre>
+           *
+           * <code>uint64 startTime = 5;</code>
+           * @return The startTime.
+           */
+          public long getStartTime() {
+            return startTime_;
+          }
+          /**
+           * <pre>
+           * 启程时间戳
+           * </pre>
+           *
+           * <code>uint64 startTime = 5;</code>
+           * @param value The startTime to set.
+           * @return This builder for chaining.
+           */
+          public Builder setStartTime(long value) {
+            
+            startTime_ = value;
+            onChanged();
+            return this;
+          }
+          /**
+           * <pre>
+           * 启程时间戳
+           * </pre>
+           *
+           * <code>uint64 startTime = 5;</code>
+           * @return This builder for chaining.
+           */
+          public Builder clearStartTime() {
+            
+            startTime_ = 0L;
+            onChanged();
+            return this;
+          }
+          @java.lang.Override
+          public final Builder setUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.setUnknownFields(unknownFields);
+          }
+
+          @java.lang.Override
+          public final Builder mergeUnknownFields(
+              final com.google.protobuf.UnknownFieldSet unknownFields) {
+            return super.mergeUnknownFields(unknownFields);
+          }
+
+
+          // @@protoc_insertion_point(builder_scope:msg.WhoElseIsHereResult.UserInfo.MoveState)
+        }
+
+        // @@protoc_insertion_point(class_scope:msg.WhoElseIsHereResult.UserInfo.MoveState)
+        private static final MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState DEFAULT_INSTANCE;
+        static {
+          DEFAULT_INSTANCE = new MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState();
+        }
+
+        public static MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState getDefaultInstance() {
+          return DEFAULT_INSTANCE;
+        }
+
+        private static final com.google.protobuf.Parser<MoveState>
+            PARSER = new com.google.protobuf.AbstractParser<MoveState>() {
+          @java.lang.Override
+          public MoveState parsePartialFrom(
+              com.google.protobuf.CodedInputStream input,
+              com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+              throws com.google.protobuf.InvalidProtocolBufferException {
+            return new MoveState(input, extensionRegistry);
+          }
+        };
+
+        public static com.google.protobuf.Parser<MoveState> parser() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Parser<MoveState> getParserForType() {
+          return PARSER;
+        }
+
+        @java.lang.Override
+        public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState getDefaultInstanceForType() {
+          return DEFAULT_INSTANCE;
+        }
+
+      }
+
       public static final int USERID_FIELD_NUMBER = 1;
       private int userId_;
       /**
@@ -2347,7 +3250,6 @@ public final class MessageProtocol {
        * <code>uint32 userId = 1;</code>
        * @return The userId.
        */
-      @java.lang.Override
       public int getUserId() {
         return userId_;
       }
@@ -2362,13 +3264,12 @@ public final class MessageProtocol {
        * <code>string heroAvatar = 2;</code>
        * @return The heroAvatar.
        */
-      @java.lang.Override
       public java.lang.String getHeroAvatar() {
         java.lang.Object ref = heroAvatar_;
         if (ref instanceof java.lang.String) {
           return (java.lang.String) ref;
         } else {
-          com.google.protobuf.ByteString bs =
+          com.google.protobuf.ByteString bs = 
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
           heroAvatar_ = s;
@@ -2383,12 +3284,11 @@ public final class MessageProtocol {
        * <code>string heroAvatar = 2;</code>
        * @return The bytes for heroAvatar.
        */
-      @java.lang.Override
       public com.google.protobuf.ByteString
           getHeroAvatarBytes() {
         java.lang.Object ref = heroAvatar_;
         if (ref instanceof java.lang.String) {
-          com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
           heroAvatar_ = b;
@@ -2396,6 +3296,41 @@ public final class MessageProtocol {
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
+      }
+
+      public static final int MOVESTATE_FIELD_NUMBER = 3;
+      private MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState moveState_;
+      /**
+       * <pre>
+       * 移动状态
+       * </pre>
+       *
+       * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+       * @return Whether the moveState field is set.
+       */
+      public boolean hasMoveState() {
+        return moveState_ != null;
+      }
+      /**
+       * <pre>
+       * 移动状态
+       * </pre>
+       *
+       * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+       * @return The moveState.
+       */
+      public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState getMoveState() {
+        return moveState_ == null ? MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.getDefaultInstance() : moveState_;
+      }
+      /**
+       * <pre>
+       * 移动状态
+       * </pre>
+       *
+       * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+       */
+      public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveStateOrBuilder getMoveStateOrBuilder() {
+        return getMoveState();
       }
 
       private byte memoizedIsInitialized = -1;
@@ -2418,6 +3353,9 @@ public final class MessageProtocol {
         if (!getHeroAvatarBytes().isEmpty()) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 2, heroAvatar_);
         }
+        if (moveState_ != null) {
+          output.writeMessage(3, getMoveState());
+        }
         unknownFields.writeTo(output);
       }
 
@@ -2433,6 +3371,10 @@ public final class MessageProtocol {
         }
         if (!getHeroAvatarBytes().isEmpty()) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, heroAvatar_);
+        }
+        if (moveState_ != null) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(3, getMoveState());
         }
         size += unknownFields.getSerializedSize();
         memoizedSize = size;
@@ -2453,6 +3395,11 @@ public final class MessageProtocol {
             != other.getUserId()) return false;
         if (!getHeroAvatar()
             .equals(other.getHeroAvatar())) return false;
+        if (hasMoveState() != other.hasMoveState()) return false;
+        if (hasMoveState()) {
+          if (!getMoveState()
+              .equals(other.getMoveState())) return false;
+        }
         if (!unknownFields.equals(other.unknownFields)) return false;
         return true;
       }
@@ -2468,6 +3415,10 @@ public final class MessageProtocol {
         hash = (53 * hash) + getUserId();
         hash = (37 * hash) + HEROAVATAR_FIELD_NUMBER;
         hash = (53 * hash) + getHeroAvatar().hashCode();
+        if (hasMoveState()) {
+          hash = (37 * hash) + MOVESTATE_FIELD_NUMBER;
+          hash = (53 * hash) + getMoveState().hashCode();
+        }
         hash = (29 * hash) + unknownFields.hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -2587,7 +3538,7 @@ public final class MessageProtocol {
                   MessageProtocol.WhoElseIsHereResult.UserInfo.class, MessageProtocol.WhoElseIsHereResult.UserInfo.Builder.class);
         }
 
-        // Construct using cat.wars.model.GameMsgProtocol.WhoElseIsHereResult.UserInfo.newBuilder()
+        // Construct using cat.wars.model.Protocol.WhoElseIsHereResult.UserInfo.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -2609,6 +3560,12 @@ public final class MessageProtocol {
 
           heroAvatar_ = "";
 
+          if (moveStateBuilder_ == null) {
+            moveState_ = null;
+          } else {
+            moveState_ = null;
+            moveStateBuilder_ = null;
+          }
           return this;
         }
 
@@ -2637,6 +3594,11 @@ public final class MessageProtocol {
           MessageProtocol.WhoElseIsHereResult.UserInfo result = new MessageProtocol.WhoElseIsHereResult.UserInfo(this);
           result.userId_ = userId_;
           result.heroAvatar_ = heroAvatar_;
+          if (moveStateBuilder_ == null) {
+            result.moveState_ = moveState_;
+          } else {
+            result.moveState_ = moveStateBuilder_.build();
+          }
           onBuilt();
           return result;
         }
@@ -2692,6 +3654,9 @@ public final class MessageProtocol {
             heroAvatar_ = other.heroAvatar_;
             onChanged();
           }
+          if (other.hasMoveState()) {
+            mergeMoveState(other.getMoveState());
+          }
           this.mergeUnknownFields(other.unknownFields);
           onChanged();
           return this;
@@ -2730,7 +3695,6 @@ public final class MessageProtocol {
          * <code>uint32 userId = 1;</code>
          * @return The userId.
          */
-        @java.lang.Override
         public int getUserId() {
           return userId_;
         }
@@ -2744,7 +3708,7 @@ public final class MessageProtocol {
          * @return This builder for chaining.
          */
         public Builder setUserId(int value) {
-
+          
           userId_ = value;
           onChanged();
           return this;
@@ -2758,7 +3722,7 @@ public final class MessageProtocol {
          * @return This builder for chaining.
          */
         public Builder clearUserId() {
-
+          
           userId_ = 0;
           onChanged();
           return this;
@@ -2797,7 +3761,7 @@ public final class MessageProtocol {
             getHeroAvatarBytes() {
           java.lang.Object ref = heroAvatar_;
           if (ref instanceof String) {
-            com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString b = 
                 com.google.protobuf.ByteString.copyFromUtf8(
                     (java.lang.String) ref);
             heroAvatar_ = b;
@@ -2820,7 +3784,7 @@ public final class MessageProtocol {
           if (value == null) {
     throw new NullPointerException();
   }
-
+  
           heroAvatar_ = value;
           onChanged();
           return this;
@@ -2834,7 +3798,7 @@ public final class MessageProtocol {
          * @return This builder for chaining.
          */
         public Builder clearHeroAvatar() {
-
+          
           heroAvatar_ = getDefaultInstance().getHeroAvatar();
           onChanged();
           return this;
@@ -2854,10 +3818,165 @@ public final class MessageProtocol {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
-
+          
           heroAvatar_ = value;
           onChanged();
           return this;
+        }
+
+        private MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState moveState_;
+        private com.google.protobuf.SingleFieldBuilderV3<
+            MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveStateOrBuilder> moveStateBuilder_;
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         * @return Whether the moveState field is set.
+         */
+        public boolean hasMoveState() {
+          return moveStateBuilder_ != null || moveState_ != null;
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         * @return The moveState.
+         */
+        public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState getMoveState() {
+          if (moveStateBuilder_ == null) {
+            return moveState_ == null ? MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.getDefaultInstance() : moveState_;
+          } else {
+            return moveStateBuilder_.getMessage();
+          }
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         */
+        public Builder setMoveState(MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState value) {
+          if (moveStateBuilder_ == null) {
+            if (value == null) {
+              throw new NullPointerException();
+            }
+            moveState_ = value;
+            onChanged();
+          } else {
+            moveStateBuilder_.setMessage(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         */
+        public Builder setMoveState(
+            MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder builderForValue) {
+          if (moveStateBuilder_ == null) {
+            moveState_ = builderForValue.build();
+            onChanged();
+          } else {
+            moveStateBuilder_.setMessage(builderForValue.build());
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         */
+        public Builder mergeMoveState(MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState value) {
+          if (moveStateBuilder_ == null) {
+            if (moveState_ != null) {
+              moveState_ =
+                MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.newBuilder(moveState_).mergeFrom(value).buildPartial();
+            } else {
+              moveState_ = value;
+            }
+            onChanged();
+          } else {
+            moveStateBuilder_.mergeFrom(value);
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         */
+        public Builder clearMoveState() {
+          if (moveStateBuilder_ == null) {
+            moveState_ = null;
+            onChanged();
+          } else {
+            moveState_ = null;
+            moveStateBuilder_ = null;
+          }
+
+          return this;
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         */
+        public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder getMoveStateBuilder() {
+          
+          onChanged();
+          return getMoveStateFieldBuilder().getBuilder();
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         */
+        public MessageProtocol.WhoElseIsHereResult.UserInfo.MoveStateOrBuilder getMoveStateOrBuilder() {
+          if (moveStateBuilder_ != null) {
+            return moveStateBuilder_.getMessageOrBuilder();
+          } else {
+            return moveState_ == null ?
+                MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.getDefaultInstance() : moveState_;
+          }
+        }
+        /**
+         * <pre>
+         * 移动状态
+         * </pre>
+         *
+         * <code>.msg.WhoElseIsHereResult.UserInfo.MoveState moveState = 3;</code>
+         */
+        private com.google.protobuf.SingleFieldBuilderV3<
+            MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveStateOrBuilder>
+            getMoveStateFieldBuilder() {
+          if (moveStateBuilder_ == null) {
+            moveStateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+                MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveState.Builder, MessageProtocol.WhoElseIsHereResult.UserInfo.MoveStateOrBuilder>(
+                    getMoveState(),
+                    getParentForChildren(),
+                    isClean());
+            moveState_ = null;
+          }
+          return moveStateBuilder_;
         }
         @java.lang.Override
         public final Builder setUnknownFields(
@@ -2921,7 +4040,6 @@ public final class MessageProtocol {
      *
      * <code>repeated .msg.WhoElseIsHereResult.UserInfo userInfo = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<MessageProtocol.WhoElseIsHereResult.UserInfo> getUserInfoList() {
       return userInfo_;
     }
@@ -2932,7 +4050,6 @@ public final class MessageProtocol {
      *
      * <code>repeated .msg.WhoElseIsHereResult.UserInfo userInfo = 1;</code>
      */
-    @java.lang.Override
     public java.util.List<? extends MessageProtocol.WhoElseIsHereResult.UserInfoOrBuilder>
         getUserInfoOrBuilderList() {
       return userInfo_;
@@ -2944,7 +4061,6 @@ public final class MessageProtocol {
      *
      * <code>repeated .msg.WhoElseIsHereResult.UserInfo userInfo = 1;</code>
      */
-    @java.lang.Override
     public int getUserInfoCount() {
       return userInfo_.size();
     }
@@ -2955,7 +4071,6 @@ public final class MessageProtocol {
      *
      * <code>repeated .msg.WhoElseIsHereResult.UserInfo userInfo = 1;</code>
      */
-    @java.lang.Override
     public MessageProtocol.WhoElseIsHereResult.UserInfo getUserInfo(int index) {
       return userInfo_.get(index);
     }
@@ -2966,7 +4081,6 @@ public final class MessageProtocol {
      *
      * <code>repeated .msg.WhoElseIsHereResult.UserInfo userInfo = 1;</code>
      */
-    @java.lang.Override
     public MessageProtocol.WhoElseIsHereResult.UserInfoOrBuilder getUserInfoOrBuilder(
         int index) {
       return userInfo_.get(index);
@@ -3153,7 +4267,7 @@ public final class MessageProtocol {
                 MessageProtocol.WhoElseIsHereResult.class, MessageProtocol.WhoElseIsHereResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.WhoElseIsHereResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.WhoElseIsHereResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -3280,7 +4394,7 @@ public final class MessageProtocol {
               userInfoBuilder_ = null;
               userInfo_ = other.userInfo_;
               bitField0_ = (bitField0_ & ~0x00000001);
-              userInfoBuilder_ =
+              userInfoBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getUserInfoFieldBuilder() : null;
             } else {
@@ -3692,10 +4806,30 @@ public final class MessageProtocol {
      * XXX 注意: 用户移动指令中没有用户 Id,
      * 这是为什么?
      *
+     * 起始位置 X
+     * </pre>
+     *
+     * <code>float moveFromPosX = 1;</code>
+     * @return The moveFromPosX.
+     */
+    float getMoveFromPosX();
+
+    /**
+     * <pre>
+     * 起始位置 Y
+     * </pre>
+     *
+     * <code>float moveFromPosY = 2;</code>
+     * @return The moveFromPosY.
+     */
+    float getMoveFromPosY();
+
+    /**
+     * <pre>
      * 移动到位置 X
      * </pre>
      *
-     * <code>float moveToPosX = 1;</code>
+     * <code>float moveToPosX = 3;</code>
      * @return The moveToPosX.
      */
     float getMoveToPosX();
@@ -3705,7 +4839,7 @@ public final class MessageProtocol {
      * 移动到位置 Y
      * </pre>
      *
-     * <code>float moveToPosY = 2;</code>
+     * <code>float moveToPosY = 4;</code>
      * @return The moveToPosY.
      */
     float getMoveToPosY();
@@ -3720,7 +4854,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserMoveToCmd}
    */
-  public static final class UserMoveToCmd extends
+  public  static final class UserMoveToCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserMoveToCmd)
       UserMoveToCmdOrBuilder {
@@ -3764,10 +4898,20 @@ public final class MessageProtocol {
               break;
             case 13: {
 
-              moveToPosX_ = input.readFloat();
+              moveFromPosX_ = input.readFloat();
               break;
             }
             case 21: {
+
+              moveFromPosY_ = input.readFloat();
+              break;
+            }
+            case 29: {
+
+              moveToPosX_ = input.readFloat();
+              break;
+            }
+            case 37: {
 
               moveToPosY_ = input.readFloat();
               break;
@@ -3804,36 +4948,62 @@ public final class MessageProtocol {
               MessageProtocol.UserMoveToCmd.class, MessageProtocol.UserMoveToCmd.Builder.class);
     }
 
-    public static final int MOVETOPOSX_FIELD_NUMBER = 1;
-    private float moveToPosX_;
+    public static final int MOVEFROMPOSX_FIELD_NUMBER = 1;
+    private float moveFromPosX_;
     /**
      * <pre>
      *
      * XXX 注意: 用户移动指令中没有用户 Id,
      * 这是为什么?
      *
+     * 起始位置 X
+     * </pre>
+     *
+     * <code>float moveFromPosX = 1;</code>
+     * @return The moveFromPosX.
+     */
+    public float getMoveFromPosX() {
+      return moveFromPosX_;
+    }
+
+    public static final int MOVEFROMPOSY_FIELD_NUMBER = 2;
+    private float moveFromPosY_;
+    /**
+     * <pre>
+     * 起始位置 Y
+     * </pre>
+     *
+     * <code>float moveFromPosY = 2;</code>
+     * @return The moveFromPosY.
+     */
+    public float getMoveFromPosY() {
+      return moveFromPosY_;
+    }
+
+    public static final int MOVETOPOSX_FIELD_NUMBER = 3;
+    private float moveToPosX_;
+    /**
+     * <pre>
      * 移动到位置 X
      * </pre>
      *
-     * <code>float moveToPosX = 1;</code>
+     * <code>float moveToPosX = 3;</code>
      * @return The moveToPosX.
      */
-    @java.lang.Override
     public float getMoveToPosX() {
       return moveToPosX_;
     }
 
-    public static final int MOVETOPOSY_FIELD_NUMBER = 2;
+    public static final int MOVETOPOSY_FIELD_NUMBER = 4;
     private float moveToPosY_;
     /**
      * <pre>
      * 移动到位置 Y
      * </pre>
      *
-     * <code>float moveToPosY = 2;</code>
+     * <code>float moveToPosY = 4;</code>
      * @return The moveToPosY.
      */
-    @java.lang.Override
     public float getMoveToPosY() {
       return moveToPosY_;
     }
@@ -3852,11 +5022,17 @@ public final class MessageProtocol {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (moveFromPosX_ != 0F) {
+        output.writeFloat(1, moveFromPosX_);
+      }
+      if (moveFromPosY_ != 0F) {
+        output.writeFloat(2, moveFromPosY_);
+      }
       if (moveToPosX_ != 0F) {
-        output.writeFloat(1, moveToPosX_);
+        output.writeFloat(3, moveToPosX_);
       }
       if (moveToPosY_ != 0F) {
-        output.writeFloat(2, moveToPosY_);
+        output.writeFloat(4, moveToPosY_);
       }
       unknownFields.writeTo(output);
     }
@@ -3867,13 +5043,21 @@ public final class MessageProtocol {
       if (size != -1) return size;
 
       size = 0;
+      if (moveFromPosX_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(1, moveFromPosX_);
+      }
+      if (moveFromPosY_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, moveFromPosY_);
+      }
       if (moveToPosX_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(1, moveToPosX_);
+          .computeFloatSize(3, moveToPosX_);
       }
       if (moveToPosY_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, moveToPosY_);
+          .computeFloatSize(4, moveToPosY_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3890,6 +5074,12 @@ public final class MessageProtocol {
       }
       MessageProtocol.UserMoveToCmd other = (MessageProtocol.UserMoveToCmd) obj;
 
+      if (java.lang.Float.floatToIntBits(getMoveFromPosX())
+          != java.lang.Float.floatToIntBits(
+              other.getMoveFromPosX())) return false;
+      if (java.lang.Float.floatToIntBits(getMoveFromPosY())
+          != java.lang.Float.floatToIntBits(
+              other.getMoveFromPosY())) return false;
       if (java.lang.Float.floatToIntBits(getMoveToPosX())
           != java.lang.Float.floatToIntBits(
               other.getMoveToPosX())) return false;
@@ -3907,6 +5097,12 @@ public final class MessageProtocol {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + MOVEFROMPOSX_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMoveFromPosX());
+      hash = (37 * hash) + MOVEFROMPOSY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMoveFromPosY());
       hash = (37 * hash) + MOVETOPOSX_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getMoveToPosX());
@@ -4035,7 +5231,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserMoveToCmd.class, MessageProtocol.UserMoveToCmd.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserMoveToCmd.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserMoveToCmd.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4053,6 +5249,10 @@ public final class MessageProtocol {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        moveFromPosX_ = 0F;
+
+        moveFromPosY_ = 0F;
+
         moveToPosX_ = 0F;
 
         moveToPosY_ = 0F;
@@ -4083,6 +5283,8 @@ public final class MessageProtocol {
       @java.lang.Override
       public MessageProtocol.UserMoveToCmd buildPartial() {
         MessageProtocol.UserMoveToCmd result = new MessageProtocol.UserMoveToCmd(this);
+        result.moveFromPosX_ = moveFromPosX_;
+        result.moveFromPosY_ = moveFromPosY_;
         result.moveToPosX_ = moveToPosX_;
         result.moveToPosY_ = moveToPosY_;
         onBuilt();
@@ -4133,6 +5335,12 @@ public final class MessageProtocol {
 
       public Builder mergeFrom(MessageProtocol.UserMoveToCmd other) {
         if (other == MessageProtocol.UserMoveToCmd.getDefaultInstance()) return this;
+        if (other.getMoveFromPosX() != 0F) {
+          setMoveFromPosX(other.getMoveFromPosX());
+        }
+        if (other.getMoveFromPosY() != 0F) {
+          setMoveFromPosY(other.getMoveFromPosY());
+        }
         if (other.getMoveToPosX() != 0F) {
           setMoveToPosX(other.getMoveToPosX());
         }
@@ -4168,22 +5376,21 @@ public final class MessageProtocol {
         return this;
       }
 
-      private float moveToPosX_ ;
+      private float moveFromPosX_ ;
       /**
        * <pre>
        *
        * XXX 注意: 用户移动指令中没有用户 Id,
        * 这是为什么?
        *
-       * 移动到位置 X
+       * 起始位置 X
        * </pre>
        *
-       * <code>float moveToPosX = 1;</code>
-       * @return The moveToPosX.
+       * <code>float moveFromPosX = 1;</code>
+       * @return The moveFromPosX.
        */
-      @java.lang.Override
-      public float getMoveToPosX() {
-        return moveToPosX_;
+      public float getMoveFromPosX() {
+        return moveFromPosX_;
       }
       /**
        * <pre>
@@ -4191,16 +5398,16 @@ public final class MessageProtocol {
        * XXX 注意: 用户移动指令中没有用户 Id,
        * 这是为什么?
        *
-       * 移动到位置 X
+       * 起始位置 X
        * </pre>
        *
-       * <code>float moveToPosX = 1;</code>
-       * @param value The moveToPosX to set.
+       * <code>float moveFromPosX = 1;</code>
+       * @param value The moveFromPosX to set.
        * @return This builder for chaining.
        */
-      public Builder setMoveToPosX(float value) {
-
-        moveToPosX_ = value;
+      public Builder setMoveFromPosX(float value) {
+        
+        moveFromPosX_ = value;
         onChanged();
         return this;
       }
@@ -4210,14 +5417,98 @@ public final class MessageProtocol {
        * XXX 注意: 用户移动指令中没有用户 Id,
        * 这是为什么?
        *
+       * 起始位置 X
+       * </pre>
+       *
+       * <code>float moveFromPosX = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoveFromPosX() {
+        
+        moveFromPosX_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float moveFromPosY_ ;
+      /**
+       * <pre>
+       * 起始位置 Y
+       * </pre>
+       *
+       * <code>float moveFromPosY = 2;</code>
+       * @return The moveFromPosY.
+       */
+      public float getMoveFromPosY() {
+        return moveFromPosY_;
+      }
+      /**
+       * <pre>
+       * 起始位置 Y
+       * </pre>
+       *
+       * <code>float moveFromPosY = 2;</code>
+       * @param value The moveFromPosY to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoveFromPosY(float value) {
+        
+        moveFromPosY_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 起始位置 Y
+       * </pre>
+       *
+       * <code>float moveFromPosY = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoveFromPosY() {
+        
+        moveFromPosY_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float moveToPosX_ ;
+      /**
+       * <pre>
        * 移动到位置 X
        * </pre>
        *
-       * <code>float moveToPosX = 1;</code>
+       * <code>float moveToPosX = 3;</code>
+       * @return The moveToPosX.
+       */
+      public float getMoveToPosX() {
+        return moveToPosX_;
+      }
+      /**
+       * <pre>
+       * 移动到位置 X
+       * </pre>
+       *
+       * <code>float moveToPosX = 3;</code>
+       * @param value The moveToPosX to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoveToPosX(float value) {
+        
+        moveToPosX_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 移动到位置 X
+       * </pre>
+       *
+       * <code>float moveToPosX = 3;</code>
        * @return This builder for chaining.
        */
       public Builder clearMoveToPosX() {
-
+        
         moveToPosX_ = 0F;
         onChanged();
         return this;
@@ -4229,10 +5520,9 @@ public final class MessageProtocol {
        * 移动到位置 Y
        * </pre>
        *
-       * <code>float moveToPosY = 2;</code>
+       * <code>float moveToPosY = 4;</code>
        * @return The moveToPosY.
        */
-      @java.lang.Override
       public float getMoveToPosY() {
         return moveToPosY_;
       }
@@ -4241,12 +5531,12 @@ public final class MessageProtocol {
        * 移动到位置 Y
        * </pre>
        *
-       * <code>float moveToPosY = 2;</code>
+       * <code>float moveToPosY = 4;</code>
        * @param value The moveToPosY to set.
        * @return This builder for chaining.
        */
       public Builder setMoveToPosY(float value) {
-
+        
         moveToPosY_ = value;
         onChanged();
         return this;
@@ -4256,11 +5546,11 @@ public final class MessageProtocol {
        * 移动到位置 Y
        * </pre>
        *
-       * <code>float moveToPosY = 2;</code>
+       * <code>float moveToPosY = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearMoveToPosY() {
-
+        
         moveToPosY_ = 0F;
         onChanged();
         return this;
@@ -4334,10 +5624,30 @@ public final class MessageProtocol {
 
     /**
      * <pre>
+     * 起始位置 X
+     * </pre>
+     *
+     * <code>float moveFromPosX = 2;</code>
+     * @return The moveFromPosX.
+     */
+    float getMoveFromPosX();
+
+    /**
+     * <pre>
+     * 起始位置 Y
+     * </pre>
+     *
+     * <code>float moveFromPosY = 3;</code>
+     * @return The moveFromPosY.
+     */
+    float getMoveFromPosY();
+
+    /**
+     * <pre>
      * 移动到位置 X
      * </pre>
      *
-     * <code>float moveToPosX = 2;</code>
+     * <code>float moveToPosX = 4;</code>
      * @return The moveToPosX.
      */
     float getMoveToPosX();
@@ -4347,10 +5657,20 @@ public final class MessageProtocol {
      * 移动到位置 Y
      * </pre>
      *
-     * <code>float moveToPosY = 3;</code>
+     * <code>float moveToPosY = 5;</code>
      * @return The moveToPosY.
      */
     float getMoveToPosY();
+
+    /**
+     * <pre>
+     * 启程时间戳
+     * </pre>
+     *
+     * <code>uint64 moveStartTime = 6;</code>
+     * @return The moveStartTime.
+     */
+    long getMoveStartTime();
   }
   /**
    * <pre>
@@ -4359,7 +5679,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserMoveToResult}
    */
-  public static final class UserMoveToResult extends
+  public  static final class UserMoveToResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserMoveToResult)
       UserMoveToResultOrBuilder {
@@ -4408,12 +5728,27 @@ public final class MessageProtocol {
             }
             case 21: {
 
-              moveToPosX_ = input.readFloat();
+              moveFromPosX_ = input.readFloat();
               break;
             }
             case 29: {
 
+              moveFromPosY_ = input.readFloat();
+              break;
+            }
+            case 37: {
+
+              moveToPosX_ = input.readFloat();
+              break;
+            }
+            case 45: {
+
               moveToPosY_ = input.readFloat();
+              break;
+            }
+            case 48: {
+
+              moveStartTime_ = input.readUInt64();
               break;
             }
             default: {
@@ -4458,39 +5793,78 @@ public final class MessageProtocol {
      * <code>uint32 moveUserId = 1;</code>
      * @return The moveUserId.
      */
-    @java.lang.Override
     public int getMoveUserId() {
       return moveUserId_;
     }
 
-    public static final int MOVETOPOSX_FIELD_NUMBER = 2;
+    public static final int MOVEFROMPOSX_FIELD_NUMBER = 2;
+    private float moveFromPosX_;
+    /**
+     * <pre>
+     * 起始位置 X
+     * </pre>
+     *
+     * <code>float moveFromPosX = 2;</code>
+     * @return The moveFromPosX.
+     */
+    public float getMoveFromPosX() {
+      return moveFromPosX_;
+    }
+
+    public static final int MOVEFROMPOSY_FIELD_NUMBER = 3;
+    private float moveFromPosY_;
+    /**
+     * <pre>
+     * 起始位置 Y
+     * </pre>
+     *
+     * <code>float moveFromPosY = 3;</code>
+     * @return The moveFromPosY.
+     */
+    public float getMoveFromPosY() {
+      return moveFromPosY_;
+    }
+
+    public static final int MOVETOPOSX_FIELD_NUMBER = 4;
     private float moveToPosX_;
     /**
      * <pre>
      * 移动到位置 X
      * </pre>
      *
-     * <code>float moveToPosX = 2;</code>
+     * <code>float moveToPosX = 4;</code>
      * @return The moveToPosX.
      */
-    @java.lang.Override
     public float getMoveToPosX() {
       return moveToPosX_;
     }
 
-    public static final int MOVETOPOSY_FIELD_NUMBER = 3;
+    public static final int MOVETOPOSY_FIELD_NUMBER = 5;
     private float moveToPosY_;
     /**
      * <pre>
      * 移动到位置 Y
      * </pre>
      *
-     * <code>float moveToPosY = 3;</code>
+     * <code>float moveToPosY = 5;</code>
      * @return The moveToPosY.
      */
-    @java.lang.Override
     public float getMoveToPosY() {
       return moveToPosY_;
+    }
+
+    public static final int MOVESTARTTIME_FIELD_NUMBER = 6;
+    private long moveStartTime_;
+    /**
+     * <pre>
+     * 启程时间戳
+     * </pre>
+     *
+     * <code>uint64 moveStartTime = 6;</code>
+     * @return The moveStartTime.
+     */
+    public long getMoveStartTime() {
+      return moveStartTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4510,11 +5884,20 @@ public final class MessageProtocol {
       if (moveUserId_ != 0) {
         output.writeUInt32(1, moveUserId_);
       }
+      if (moveFromPosX_ != 0F) {
+        output.writeFloat(2, moveFromPosX_);
+      }
+      if (moveFromPosY_ != 0F) {
+        output.writeFloat(3, moveFromPosY_);
+      }
       if (moveToPosX_ != 0F) {
-        output.writeFloat(2, moveToPosX_);
+        output.writeFloat(4, moveToPosX_);
       }
       if (moveToPosY_ != 0F) {
-        output.writeFloat(3, moveToPosY_);
+        output.writeFloat(5, moveToPosY_);
+      }
+      if (moveStartTime_ != 0L) {
+        output.writeUInt64(6, moveStartTime_);
       }
       unknownFields.writeTo(output);
     }
@@ -4529,13 +5912,25 @@ public final class MessageProtocol {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(1, moveUserId_);
       }
+      if (moveFromPosX_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(2, moveFromPosX_);
+      }
+      if (moveFromPosY_ != 0F) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(3, moveFromPosY_);
+      }
       if (moveToPosX_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(2, moveToPosX_);
+          .computeFloatSize(4, moveToPosX_);
       }
       if (moveToPosY_ != 0F) {
         size += com.google.protobuf.CodedOutputStream
-          .computeFloatSize(3, moveToPosY_);
+          .computeFloatSize(5, moveToPosY_);
+      }
+      if (moveStartTime_ != 0L) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt64Size(6, moveStartTime_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4554,12 +5949,20 @@ public final class MessageProtocol {
 
       if (getMoveUserId()
           != other.getMoveUserId()) return false;
+      if (java.lang.Float.floatToIntBits(getMoveFromPosX())
+          != java.lang.Float.floatToIntBits(
+              other.getMoveFromPosX())) return false;
+      if (java.lang.Float.floatToIntBits(getMoveFromPosY())
+          != java.lang.Float.floatToIntBits(
+              other.getMoveFromPosY())) return false;
       if (java.lang.Float.floatToIntBits(getMoveToPosX())
           != java.lang.Float.floatToIntBits(
               other.getMoveToPosX())) return false;
       if (java.lang.Float.floatToIntBits(getMoveToPosY())
           != java.lang.Float.floatToIntBits(
               other.getMoveToPosY())) return false;
+      if (getMoveStartTime()
+          != other.getMoveStartTime()) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -4573,12 +5976,21 @@ public final class MessageProtocol {
       hash = (19 * hash) + getDescriptor().hashCode();
       hash = (37 * hash) + MOVEUSERID_FIELD_NUMBER;
       hash = (53 * hash) + getMoveUserId();
+      hash = (37 * hash) + MOVEFROMPOSX_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMoveFromPosX());
+      hash = (37 * hash) + MOVEFROMPOSY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMoveFromPosY());
       hash = (37 * hash) + MOVETOPOSX_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getMoveToPosX());
       hash = (37 * hash) + MOVETOPOSY_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getMoveToPosY());
+      hash = (37 * hash) + MOVESTARTTIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getMoveStartTime());
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -4698,7 +6110,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserMoveToResult.class, MessageProtocol.UserMoveToResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserMoveToResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserMoveToResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4718,9 +6130,15 @@ public final class MessageProtocol {
         super.clear();
         moveUserId_ = 0;
 
+        moveFromPosX_ = 0F;
+
+        moveFromPosY_ = 0F;
+
         moveToPosX_ = 0F;
 
         moveToPosY_ = 0F;
+
+        moveStartTime_ = 0L;
 
         return this;
       }
@@ -4749,8 +6167,11 @@ public final class MessageProtocol {
       public MessageProtocol.UserMoveToResult buildPartial() {
         MessageProtocol.UserMoveToResult result = new MessageProtocol.UserMoveToResult(this);
         result.moveUserId_ = moveUserId_;
+        result.moveFromPosX_ = moveFromPosX_;
+        result.moveFromPosY_ = moveFromPosY_;
         result.moveToPosX_ = moveToPosX_;
         result.moveToPosY_ = moveToPosY_;
+        result.moveStartTime_ = moveStartTime_;
         onBuilt();
         return result;
       }
@@ -4802,11 +6223,20 @@ public final class MessageProtocol {
         if (other.getMoveUserId() != 0) {
           setMoveUserId(other.getMoveUserId());
         }
+        if (other.getMoveFromPosX() != 0F) {
+          setMoveFromPosX(other.getMoveFromPosX());
+        }
+        if (other.getMoveFromPosY() != 0F) {
+          setMoveFromPosY(other.getMoveFromPosY());
+        }
         if (other.getMoveToPosX() != 0F) {
           setMoveToPosX(other.getMoveToPosX());
         }
         if (other.getMoveToPosY() != 0F) {
           setMoveToPosY(other.getMoveToPosY());
+        }
+        if (other.getMoveStartTime() != 0L) {
+          setMoveStartTime(other.getMoveStartTime());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -4846,7 +6276,6 @@ public final class MessageProtocol {
        * <code>uint32 moveUserId = 1;</code>
        * @return The moveUserId.
        */
-      @java.lang.Override
       public int getMoveUserId() {
         return moveUserId_;
       }
@@ -4860,7 +6289,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setMoveUserId(int value) {
-
+        
         moveUserId_ = value;
         onChanged();
         return this;
@@ -4874,8 +6303,92 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearMoveUserId() {
-
+        
         moveUserId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private float moveFromPosX_ ;
+      /**
+       * <pre>
+       * 起始位置 X
+       * </pre>
+       *
+       * <code>float moveFromPosX = 2;</code>
+       * @return The moveFromPosX.
+       */
+      public float getMoveFromPosX() {
+        return moveFromPosX_;
+      }
+      /**
+       * <pre>
+       * 起始位置 X
+       * </pre>
+       *
+       * <code>float moveFromPosX = 2;</code>
+       * @param value The moveFromPosX to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoveFromPosX(float value) {
+        
+        moveFromPosX_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 起始位置 X
+       * </pre>
+       *
+       * <code>float moveFromPosX = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoveFromPosX() {
+        
+        moveFromPosX_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float moveFromPosY_ ;
+      /**
+       * <pre>
+       * 起始位置 Y
+       * </pre>
+       *
+       * <code>float moveFromPosY = 3;</code>
+       * @return The moveFromPosY.
+       */
+      public float getMoveFromPosY() {
+        return moveFromPosY_;
+      }
+      /**
+       * <pre>
+       * 起始位置 Y
+       * </pre>
+       *
+       * <code>float moveFromPosY = 3;</code>
+       * @param value The moveFromPosY to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoveFromPosY(float value) {
+        
+        moveFromPosY_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 起始位置 Y
+       * </pre>
+       *
+       * <code>float moveFromPosY = 3;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoveFromPosY() {
+        
+        moveFromPosY_ = 0F;
         onChanged();
         return this;
       }
@@ -4886,10 +6399,9 @@ public final class MessageProtocol {
        * 移动到位置 X
        * </pre>
        *
-       * <code>float moveToPosX = 2;</code>
+       * <code>float moveToPosX = 4;</code>
        * @return The moveToPosX.
        */
-      @java.lang.Override
       public float getMoveToPosX() {
         return moveToPosX_;
       }
@@ -4898,12 +6410,12 @@ public final class MessageProtocol {
        * 移动到位置 X
        * </pre>
        *
-       * <code>float moveToPosX = 2;</code>
+       * <code>float moveToPosX = 4;</code>
        * @param value The moveToPosX to set.
        * @return This builder for chaining.
        */
       public Builder setMoveToPosX(float value) {
-
+        
         moveToPosX_ = value;
         onChanged();
         return this;
@@ -4913,11 +6425,11 @@ public final class MessageProtocol {
        * 移动到位置 X
        * </pre>
        *
-       * <code>float moveToPosX = 2;</code>
+       * <code>float moveToPosX = 4;</code>
        * @return This builder for chaining.
        */
       public Builder clearMoveToPosX() {
-
+        
         moveToPosX_ = 0F;
         onChanged();
         return this;
@@ -4929,10 +6441,9 @@ public final class MessageProtocol {
        * 移动到位置 Y
        * </pre>
        *
-       * <code>float moveToPosY = 3;</code>
+       * <code>float moveToPosY = 5;</code>
        * @return The moveToPosY.
        */
-      @java.lang.Override
       public float getMoveToPosY() {
         return moveToPosY_;
       }
@@ -4941,12 +6452,12 @@ public final class MessageProtocol {
        * 移动到位置 Y
        * </pre>
        *
-       * <code>float moveToPosY = 3;</code>
+       * <code>float moveToPosY = 5;</code>
        * @param value The moveToPosY to set.
        * @return This builder for chaining.
        */
       public Builder setMoveToPosY(float value) {
-
+        
         moveToPosY_ = value;
         onChanged();
         return this;
@@ -4956,12 +6467,54 @@ public final class MessageProtocol {
        * 移动到位置 Y
        * </pre>
        *
-       * <code>float moveToPosY = 3;</code>
+       * <code>float moveToPosY = 5;</code>
        * @return This builder for chaining.
        */
       public Builder clearMoveToPosY() {
-
+        
         moveToPosY_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private long moveStartTime_ ;
+      /**
+       * <pre>
+       * 启程时间戳
+       * </pre>
+       *
+       * <code>uint64 moveStartTime = 6;</code>
+       * @return The moveStartTime.
+       */
+      public long getMoveStartTime() {
+        return moveStartTime_;
+      }
+      /**
+       * <pre>
+       * 启程时间戳
+       * </pre>
+       *
+       * <code>uint64 moveStartTime = 6;</code>
+       * @param value The moveStartTime to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMoveStartTime(long value) {
+        
+        moveStartTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 启程时间戳
+       * </pre>
+       *
+       * <code>uint64 moveStartTime = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMoveStartTime() {
+        
+        moveStartTime_ = 0L;
         onChanged();
         return this;
       }
@@ -5045,7 +6598,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserQuitResult}
    */
-  public static final class UserQuitResult extends
+  public  static final class UserQuitResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserQuitResult)
       UserQuitResultOrBuilder {
@@ -5134,7 +6687,6 @@ public final class MessageProtocol {
      * <code>uint32 quitUserId = 1;</code>
      * @return The quitUserId.
      */
-    @java.lang.Override
     public int getQuitUserId() {
       return quitUserId_;
     }
@@ -5324,7 +6876,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserQuitResult.class, MessageProtocol.UserQuitResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserQuitResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserQuitResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -5460,7 +7012,6 @@ public final class MessageProtocol {
        * <code>uint32 quitUserId = 1;</code>
        * @return The quitUserId.
        */
-      @java.lang.Override
       public int getQuitUserId() {
         return quitUserId_;
       }
@@ -5474,7 +7025,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setQuitUserId(int value) {
-
+        
         quitUserId_ = value;
         onChanged();
         return this;
@@ -5488,7 +7039,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearQuitUserId() {
-
+        
         quitUserId_ = 0;
         onChanged();
         return this;
@@ -5560,7 +7111,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserStopCmd}
    */
-  public static final class UserStopCmd extends
+  public  static final class UserStopCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserStopCmd)
       UserStopCmdOrBuilder {
@@ -5805,7 +7356,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserStopCmd.class, MessageProtocol.UserStopCmd.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserStopCmd.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserStopCmd.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6019,7 +7570,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserStopResult}
    */
-  public static final class UserStopResult extends
+  public  static final class UserStopResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserStopResult)
       UserStopResultOrBuilder {
@@ -6118,7 +7669,6 @@ public final class MessageProtocol {
      * <code>uint32 stopUserId = 1;</code>
      * @return The stopUserId.
      */
-    @java.lang.Override
     public int getStopUserId() {
       return stopUserId_;
     }
@@ -6133,7 +7683,6 @@ public final class MessageProtocol {
      * <code>float stopAtPosX = 2;</code>
      * @return The stopAtPosX.
      */
-    @java.lang.Override
     public float getStopAtPosX() {
       return stopAtPosX_;
     }
@@ -6148,7 +7697,6 @@ public final class MessageProtocol {
      * <code>float stopAtPosY = 3;</code>
      * @return The stopAtPosY.
      */
-    @java.lang.Override
     public float getStopAtPosY() {
       return stopAtPosY_;
     }
@@ -6358,7 +7906,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserStopResult.class, MessageProtocol.UserStopResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserStopResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserStopResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -6506,7 +8054,6 @@ public final class MessageProtocol {
        * <code>uint32 stopUserId = 1;</code>
        * @return The stopUserId.
        */
-      @java.lang.Override
       public int getStopUserId() {
         return stopUserId_;
       }
@@ -6520,7 +8067,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setStopUserId(int value) {
-
+        
         stopUserId_ = value;
         onChanged();
         return this;
@@ -6534,7 +8081,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearStopUserId() {
-
+        
         stopUserId_ = 0;
         onChanged();
         return this;
@@ -6549,7 +8096,6 @@ public final class MessageProtocol {
        * <code>float stopAtPosX = 2;</code>
        * @return The stopAtPosX.
        */
-      @java.lang.Override
       public float getStopAtPosX() {
         return stopAtPosX_;
       }
@@ -6563,7 +8109,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setStopAtPosX(float value) {
-
+        
         stopAtPosX_ = value;
         onChanged();
         return this;
@@ -6577,7 +8123,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearStopAtPosX() {
-
+        
         stopAtPosX_ = 0F;
         onChanged();
         return this;
@@ -6592,7 +8138,6 @@ public final class MessageProtocol {
        * <code>float stopAtPosY = 3;</code>
        * @return The stopAtPosY.
        */
-      @java.lang.Override
       public float getStopAtPosY() {
         return stopAtPosY_;
       }
@@ -6606,7 +8151,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setStopAtPosY(float value) {
-
+        
         stopAtPosY_ = value;
         onChanged();
         return this;
@@ -6620,7 +8165,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearStopAtPosY() {
-
+        
         stopAtPosY_ = 0F;
         onChanged();
         return this;
@@ -6702,7 +8247,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserAttkCmd}
    */
-  public static final class UserAttkCmd extends
+  public  static final class UserAttkCmd extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserAttkCmd)
       UserAttkCmdOrBuilder {
@@ -6791,7 +8336,6 @@ public final class MessageProtocol {
      * <code>uint32 targetUserId = 1;</code>
      * @return The targetUserId.
      */
-    @java.lang.Override
     public int getTargetUserId() {
       return targetUserId_;
     }
@@ -6978,7 +8522,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserAttkCmd.class, MessageProtocol.UserAttkCmd.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserAttkCmd.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserAttkCmd.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7114,7 +8658,6 @@ public final class MessageProtocol {
        * <code>uint32 targetUserId = 1;</code>
        * @return The targetUserId.
        */
-      @java.lang.Override
       public int getTargetUserId() {
         return targetUserId_;
       }
@@ -7128,7 +8671,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setTargetUserId(int value) {
-
+        
         targetUserId_ = value;
         onChanged();
         return this;
@@ -7142,7 +8685,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearTargetUserId() {
-
+        
         targetUserId_ = 0;
         onChanged();
         return this;
@@ -7231,7 +8774,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserAttkResult}
    */
-  public static final class UserAttkResult extends
+  public  static final class UserAttkResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserAttkResult)
       UserAttkResultOrBuilder {
@@ -7325,7 +8868,6 @@ public final class MessageProtocol {
      * <code>uint32 attkUserId = 1;</code>
      * @return The attkUserId.
      */
-    @java.lang.Override
     public int getAttkUserId() {
       return attkUserId_;
     }
@@ -7340,7 +8882,6 @@ public final class MessageProtocol {
      * <code>uint32 targetUserId = 2;</code>
      * @return The targetUserId.
      */
-    @java.lang.Override
     public int getTargetUserId() {
       return targetUserId_;
     }
@@ -7535,7 +9076,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserAttkResult.class, MessageProtocol.UserAttkResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserAttkResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserAttkResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -7677,7 +9218,6 @@ public final class MessageProtocol {
        * <code>uint32 attkUserId = 1;</code>
        * @return The attkUserId.
        */
-      @java.lang.Override
       public int getAttkUserId() {
         return attkUserId_;
       }
@@ -7691,7 +9231,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setAttkUserId(int value) {
-
+        
         attkUserId_ = value;
         onChanged();
         return this;
@@ -7705,7 +9245,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearAttkUserId() {
-
+        
         attkUserId_ = 0;
         onChanged();
         return this;
@@ -7720,7 +9260,6 @@ public final class MessageProtocol {
        * <code>uint32 targetUserId = 2;</code>
        * @return The targetUserId.
        */
-      @java.lang.Override
       public int getTargetUserId() {
         return targetUserId_;
       }
@@ -7734,7 +9273,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setTargetUserId(int value) {
-
+        
         targetUserId_ = value;
         onChanged();
         return this;
@@ -7748,7 +9287,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearTargetUserId() {
-
+        
         targetUserId_ = 0;
         onChanged();
         return this;
@@ -7837,7 +9376,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserSubtractHpResult}
    */
-  public static final class UserSubtractHpResult extends
+  public  static final class UserSubtractHpResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserSubtractHpResult)
       UserSubtractHpResultOrBuilder {
@@ -7931,7 +9470,6 @@ public final class MessageProtocol {
      * <code>uint32 targetUserId = 1;</code>
      * @return The targetUserId.
      */
-    @java.lang.Override
     public int getTargetUserId() {
       return targetUserId_;
     }
@@ -7946,7 +9484,6 @@ public final class MessageProtocol {
      * <code>uint32 subtractHp = 2;</code>
      * @return The subtractHp.
      */
-    @java.lang.Override
     public int getSubtractHp() {
       return subtractHp_;
     }
@@ -8141,7 +9678,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserSubtractHpResult.class, MessageProtocol.UserSubtractHpResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserSubtractHpResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserSubtractHpResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8283,7 +9820,6 @@ public final class MessageProtocol {
        * <code>uint32 targetUserId = 1;</code>
        * @return The targetUserId.
        */
-      @java.lang.Override
       public int getTargetUserId() {
         return targetUserId_;
       }
@@ -8297,7 +9833,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setTargetUserId(int value) {
-
+        
         targetUserId_ = value;
         onChanged();
         return this;
@@ -8311,7 +9847,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearTargetUserId() {
-
+        
         targetUserId_ = 0;
         onChanged();
         return this;
@@ -8326,7 +9862,6 @@ public final class MessageProtocol {
        * <code>uint32 subtractHp = 2;</code>
        * @return The subtractHp.
        */
-      @java.lang.Override
       public int getSubtractHp() {
         return subtractHp_;
       }
@@ -8340,7 +9875,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setSubtractHp(int value) {
-
+        
         subtractHp_ = value;
         onChanged();
         return this;
@@ -8354,7 +9889,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearSubtractHp() {
-
+        
         subtractHp_ = 0;
         onChanged();
         return this;
@@ -8433,7 +9968,7 @@ public final class MessageProtocol {
    *
    * Protobuf type {@code msg.UserDieResult}
    */
-  public static final class UserDieResult extends
+  public  static final class UserDieResult extends
       com.google.protobuf.GeneratedMessageV3 implements
       // @@protoc_insertion_point(message_implements:msg.UserDieResult)
       UserDieResultOrBuilder {
@@ -8522,7 +10057,6 @@ public final class MessageProtocol {
      * <code>uint32 targetUserId = 1;</code>
      * @return The targetUserId.
      */
-    @java.lang.Override
     public int getTargetUserId() {
       return targetUserId_;
     }
@@ -8706,7 +10240,7 @@ public final class MessageProtocol {
                 MessageProtocol.UserDieResult.class, MessageProtocol.UserDieResult.Builder.class);
       }
 
-      // Construct using cat.wars.model.GameMsgProtocol.UserDieResult.newBuilder()
+      // Construct using cat.wars.model.Protocol.UserDieResult.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -8842,7 +10376,6 @@ public final class MessageProtocol {
        * <code>uint32 targetUserId = 1;</code>
        * @return The targetUserId.
        */
-      @java.lang.Override
       public int getTargetUserId() {
         return targetUserId_;
       }
@@ -8856,7 +10389,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder setTargetUserId(int value) {
-
+        
         targetUserId_ = value;
         onChanged();
         return this;
@@ -8870,7 +10403,7 @@ public final class MessageProtocol {
        * @return This builder for chaining.
        */
       public Builder clearTargetUserId() {
-
+        
         targetUserId_ = 0;
         onChanged();
         return this;
@@ -8930,72 +10463,77 @@ public final class MessageProtocol {
 
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserEntryCmd_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserEntryCmd_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserEntryResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserEntryResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_WhoElseIsHereCmd_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_WhoElseIsHereCmd_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_WhoElseIsHereResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_WhoElseIsHereResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_WhoElseIsHereResult_UserInfo_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_WhoElseIsHereResult_UserInfo_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserMoveToCmd_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserMoveToCmd_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserMoveToResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserMoveToResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserQuitResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserQuitResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserStopCmd_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserStopCmd_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserStopResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserStopResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserAttkCmd_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserAttkCmd_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserAttkResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserAttkResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserSubtractHpResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserSubtractHpResult_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserDieResult_descriptor;
-  private static final
+  private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserDieResult_fieldAccessorTable;
 
@@ -9007,34 +10545,40 @@ public final class MessageProtocol {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025GameMsgProtocol.proto\022\003msg\"2\n\014UserEntr" +
-      "yCmd\022\016\n\006userId\030\001 \001(\r\022\022\n\nheroAvatar\030\002 \001(\t" +
-      "\"5\n\017UserEntryResult\022\016\n\006userId\030\001 \001(\r\022\022\n\nh" +
-      "eroAvatar\030\002 \001(\t\"\022\n\020WhoElseIsHereCmd\"z\n\023W" +
-      "hoElseIsHereResult\0223\n\010userInfo\030\001 \003(\0132!.m" +
-      "sg.WhoElseIsHereResult.UserInfo\032.\n\010UserI" +
-      "nfo\022\016\n\006userId\030\001 \001(\r\022\022\n\nheroAvatar\030\002 \001(\t\"" +
-      "7\n\rUserMoveToCmd\022\022\n\nmoveToPosX\030\001 \001(\002\022\022\n\n" +
-      "moveToPosY\030\002 \001(\002\"N\n\020UserMoveToResult\022\022\n\n" +
-      "moveUserId\030\001 \001(\r\022\022\n\nmoveToPosX\030\002 \001(\002\022\022\n\n" +
-      "moveToPosY\030\003 \001(\002\"$\n\016UserQuitResult\022\022\n\nqu" +
-      "itUserId\030\001 \001(\r\"\r\n\013UserStopCmd\"L\n\016UserSto" +
-      "pResult\022\022\n\nstopUserId\030\001 \001(\r\022\022\n\nstopAtPos" +
-      "X\030\002 \001(\002\022\022\n\nstopAtPosY\030\003 \001(\002\"#\n\013UserAttkC" +
-      "md\022\024\n\014targetUserId\030\001 \001(\r\":\n\016UserAttkResu" +
-      "lt\022\022\n\nattkUserId\030\001 \001(\r\022\024\n\014targetUserId\030\002" +
-      " \001(\r\"@\n\024UserSubtractHpResult\022\024\n\014targetUs" +
-      "erId\030\001 \001(\r\022\022\n\nsubtractHp\030\002 \001(\r\"%\n\rUserDi" +
-      "eResult\022\024\n\014targetUserId\030\001 \001(\r*\264\002\n\007MsgCod" +
-      "e\022\022\n\016USER_ENTRY_CMD\020\000\022\025\n\021USER_ENTRY_RESU" +
-      "LT\020\001\022\030\n\024WHO_ELSE_IS_HERE_CMD\020\002\022\033\n\027WHO_EL" +
-      "SE_IS_HERE_RESULT\020\003\022\024\n\020USER_MOVE_TO_CMD\020" +
-      "\004\022\027\n\023USER_MOVE_TO_RESULT\020\005\022\024\n\020USER_QUIT_" +
-      "RESULT\020\006\022\021\n\rUSER_STOP_CMD\020\007\022\024\n\020USER_STOP" +
-      "_RESULT\020\010\022\021\n\rUSER_ATTK_CMD\020\t\022\024\n\020USER_ATT" +
-      "K_RESULT\020\n\022\033\n\027USER_SUBTRACT_HP_RESULT\020\013\022" +
-      "\023\n\017USER_DIE_RESULT\020\014B\020\n\016cat.wars.modelb\006" +
-      "proto3"
+      "\n\016protocol.proto\022\003msg\"2\n\014UserEntryCmd\022\016\n" +
+      "\006userId\030\001 \001(\r\022\022\n\nheroAvatar\030\002 \001(\t\"5\n\017Use" +
+      "rEntryResult\022\016\n\006userId\030\001 \001(\r\022\022\n\nheroAvat" +
+      "ar\030\002 \001(\t\"\022\n\020WhoElseIsHereCmd\"\237\002\n\023WhoElse" +
+      "IsHereResult\0223\n\010userInfo\030\001 \003(\0132!.msg.Who" +
+      "ElseIsHereResult.UserInfo\032\322\001\n\010UserInfo\022\016" +
+      "\n\006userId\030\001 \001(\r\022\022\n\nheroAvatar\030\002 \001(\t\022>\n\tmo" +
+      "veState\030\003 \001(\0132+.msg.WhoElseIsHereResult." +
+      "UserInfo.MoveState\032b\n\tMoveState\022\020\n\010fromP" +
+      "osX\030\001 \001(\002\022\020\n\010fromPosY\030\002 \001(\002\022\016\n\006toPosX\030\003 " +
+      "\001(\002\022\016\n\006toPosY\030\004 \001(\002\022\021\n\tstartTime\030\005 \001(\004\"c" +
+      "\n\rUserMoveToCmd\022\024\n\014moveFromPosX\030\001 \001(\002\022\024\n" +
+      "\014moveFromPosY\030\002 \001(\002\022\022\n\nmoveToPosX\030\003 \001(\002\022" +
+      "\022\n\nmoveToPosY\030\004 \001(\002\"\221\001\n\020UserMoveToResult" +
+      "\022\022\n\nmoveUserId\030\001 \001(\r\022\024\n\014moveFromPosX\030\002 \001" +
+      "(\002\022\024\n\014moveFromPosY\030\003 \001(\002\022\022\n\nmoveToPosX\030\004" +
+      " \001(\002\022\022\n\nmoveToPosY\030\005 \001(\002\022\025\n\rmoveStartTim" +
+      "e\030\006 \001(\004\"$\n\016UserQuitResult\022\022\n\nquitUserId\030" +
+      "\001 \001(\r\"\r\n\013UserStopCmd\"L\n\016UserStopResult\022\022" +
+      "\n\nstopUserId\030\001 \001(\r\022\022\n\nstopAtPosX\030\002 \001(\002\022\022" +
+      "\n\nstopAtPosY\030\003 \001(\002\"#\n\013UserAttkCmd\022\024\n\014tar" +
+      "getUserId\030\001 \001(\r\":\n\016UserAttkResult\022\022\n\natt" +
+      "kUserId\030\001 \001(\r\022\024\n\014targetUserId\030\002 \001(\r\"@\n\024U" +
+      "serSubtractHpResult\022\024\n\014targetUserId\030\001 \001(" +
+      "\r\022\022\n\nsubtractHp\030\002 \001(\r\"%\n\rUserDieResult\022\024" +
+      "\n\014targetUserId\030\001 \001(\r*\264\002\n\007MsgCode\022\022\n\016USER" +
+      "_ENTRY_CMD\020\000\022\025\n\021USER_ENTRY_RESULT\020\001\022\030\n\024W" +
+      "HO_ELSE_IS_HERE_CMD\020\002\022\033\n\027WHO_ELSE_IS_HER" +
+      "E_RESULT\020\003\022\024\n\020USER_MOVE_TO_CMD\020\004\022\027\n\023USER" +
+      "_MOVE_TO_RESULT\020\005\022\024\n\020USER_QUIT_RESULT\020\006\022" +
+      "\021\n\rUSER_STOP_CMD\020\007\022\024\n\020USER_STOP_RESULT\020\010" +
+      "\022\021\n\rUSER_ATTK_CMD\020\t\022\024\n\020USER_ATTK_RESULT\020" +
+      "\n\022\033\n\027USER_SUBTRACT_HP_RESULT\020\013\022\023\n\017USER_D" +
+      "IE_RESULT\020\014B\020\n\016cat.wars.modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -9069,19 +10613,25 @@ public final class MessageProtocol {
     internal_static_msg_WhoElseIsHereResult_UserInfo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_msg_WhoElseIsHereResult_UserInfo_descriptor,
-        new java.lang.String[] { "UserId", "HeroAvatar", });
+        new java.lang.String[] { "UserId", "HeroAvatar", "MoveState", });
+    internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_descriptor =
+      internal_static_msg_WhoElseIsHereResult_UserInfo_descriptor.getNestedTypes().get(0);
+    internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_msg_WhoElseIsHereResult_UserInfo_MoveState_descriptor,
+        new java.lang.String[] { "FromPosX", "FromPosY", "ToPosX", "ToPosY", "StartTime", });
     internal_static_msg_UserMoveToCmd_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_msg_UserMoveToCmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_msg_UserMoveToCmd_descriptor,
-        new java.lang.String[] { "MoveToPosX", "MoveToPosY", });
+        new java.lang.String[] { "MoveFromPosX", "MoveFromPosY", "MoveToPosX", "MoveToPosY", });
     internal_static_msg_UserMoveToResult_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_msg_UserMoveToResult_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_msg_UserMoveToResult_descriptor,
-        new java.lang.String[] { "MoveUserId", "MoveToPosX", "MoveToPosY", });
+        new java.lang.String[] { "MoveUserId", "MoveFromPosX", "MoveFromPosY", "MoveToPosX", "MoveToPosY", "MoveStartTime", });
     internal_static_msg_UserQuitResult_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_msg_UserQuitResult_fieldAccessorTable = new

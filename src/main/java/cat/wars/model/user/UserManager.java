@@ -47,4 +47,10 @@ public final class UserManager {
   public static Collection<User> listUser() {
     return USER_MAP.values();
   }
+
+  public static User getUserById(Integer userId) {
+      if (null == userId) return null;
+
+      return USER_MAP.get(userId);
+  }
 }

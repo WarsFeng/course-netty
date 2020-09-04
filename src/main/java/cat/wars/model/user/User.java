@@ -27,4 +27,9 @@ public class User {
    * 英雄形象
    */
   private String heroAvatar;
+
+  /**
+   * 用户移动状态
+   */
+  private UserMoveState userMoveState;
 }
