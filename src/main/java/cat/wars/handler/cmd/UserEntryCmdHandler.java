@@ -18,16 +18,15 @@ import static cat.wars.model.MessageProtocol.UserEntryResult;
 public class UserEntryCmdHandler implements CmdHandler<UserEntryCmd> {
 
   public void handle(ChannelHandlerContext context, UserEntryCmd cmd) {
-    int userId = cmd.getUserId();
-    String heroAvatar = cmd.getHeroAvatar();
-    context.channel().attr(AttributeKey.valueOf("userId")).set(userId); // Bind userId to channel
-
-    UserManager.addUser(new User(userId, heroAvatar)); // Add to user map
+    Integer userId = (Integer) context.channel().attr(AttributeKey.valueOf("userId")).get();
+    if (null == userId) return;
+    User user = UserManager.getUserById(userId);
+    if (null == user) return;
 
     // Result and broadcast
     UserEntryResult.Builder resultBuilder = UserEntryResult.newBuilder();
     resultBuilder.setUserId(userId);
-    resultBuilder.setHeroAvatar(heroAvatar);
+    resultBuilder.setHeroAvatar(user.getHeroAvatar());
     UserEntryResult result = resultBuilder.build();
     Broadcaster.broadcast(result);
   }

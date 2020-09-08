@@ -22,7 +22,9 @@ public class UserAttkCmdHandler implements CmdHandler<MessageProtocol.UserAttkCm
     if (null == userId || 0 >= cmd.getTargetUserId()) return;
     User targetUser = UserManager.getUserById(cmd.getTargetUserId());
 
-    if (0 >= targetUser.getCurrHP().addAndGet(-10)) {
+    int targetHP = targetUser.getCurrHP() - 10;
+    targetUser.setCurrHP(targetHP);
+    if (0 >= (targetHP)) {
       MessageProtocol.UserDieResult userDieResult =
           MessageProtocol.UserDieResult.newBuilder()
               .setTargetUserId(targetUser.getUserId())

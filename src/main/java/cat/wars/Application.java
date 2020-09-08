@@ -5,6 +5,7 @@ import cat.wars.handler.MessageEncoder;
 import cat.wars.handler.MessageHandler;
 import cat.wars.handler.MessageRecognizer;
 import cat.wars.handler.cmd.CmdHandlerFactory;
+import cat.wars.util.MySQLSessionFactory;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -32,23 +33,29 @@ public class Application {
 
     server.group(new NioEventLoopGroup(), new NioEventLoopGroup());
     server.channel(NioServerSocketChannel.class);
-    server.childHandler(new ChannelInitializer<SocketChannel>() {
-      @Override
-      protected void initChannel(SocketChannel channel) {
-        channel.pipeline().addLast(
-                new HttpServerCodec()
-                , new HttpObjectAggregator(65535)
-                , new WebSocketServerProtocolHandler("/websocket")
-                , new MessageDecoder() // Decoder
-                , new MessageEncoder() // Encoder
-                , new MessageHandler() // Handler
-        );
-      }
-    });
+    server.childHandler(
+        new ChannelInitializer<SocketChannel>() {
+          @Override
+          protected void initChannel(SocketChannel channel) {
+            channel
+                .pipeline()
+                .addLast(
+                    new HttpServerCodec(),
+                    new HttpObjectAggregator(65535),
+                    new WebSocketServerProtocolHandler("/websocket"),
+                    new MessageDecoder() // Decoder
+                    ,
+                    new MessageEncoder() // Encoder
+                    ,
+                    new MessageHandler() // Handler
+                    );
+          }
+        });
 
     try {
       ChannelFuture channelFuture = server.bind(12345).sync();
 
+      MySQLSessionFactory.init();
       if (channelFuture.isSuccess()) log.info("Application 启动成功！");
 
       channelFuture.channel().closeFuture().sync();
