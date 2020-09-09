@@ -19,6 +19,11 @@ public final class MainThreadProcessor {
 
   private MainThreadProcessor() {}
 
+  public void process(Runnable runnable) {
+    if (null == runnable) return;
+    executorService.submit(runnable);
+  }
+
   public void handler(ChannelHandlerContext context, Object msg) {
     executorService.submit(
         () -> {
@@ -31,7 +36,6 @@ public final class MainThreadProcessor {
             return;
           }
 
-          log.info(Thread.currentThread().getName());
           cmdHandler.handle(context, cast(msg));
         });
   }
