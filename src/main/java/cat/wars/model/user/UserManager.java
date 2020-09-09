@@ -1,8 +1,8 @@
 package cat.wars.model.user;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @program: netty-demo
@@ -12,10 +12,9 @@ import java.util.Map;
  */
 public final class UserManager {
 
-  private static final Map<Integer, User> USER_MAP = new HashMap<>(); // User pool
+  private static final Map<Integer, User> USER_MAP = new ConcurrentHashMap<>(); // User pool
 
-  private UserManager() {
-  }
+  private UserManager() {}
 
   /**
    * Add user to pool
@@ -49,8 +48,8 @@ public final class UserManager {
   }
 
   public static User getUserById(Integer userId) {
-      if (null == userId) return null;
+    if (null == userId) return null;
 
-      return USER_MAP.get(userId);
+    return USER_MAP.get(userId);
   }
 }

@@ -6,8 +6,6 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.io.FileNotFoundException;
-
 public class UserMapperTest {
   private static UserMapper mapper;
 
