@@ -28,6 +28,6 @@ public class UserEntryCmdHandler implements CmdHandler<UserEntryCmd> {
     resultBuilder.setUserId(userId);
     resultBuilder.setHeroAvatar(user.getHeroAvatar());
     UserEntryResult result = resultBuilder.build();
-    Broadcaster.broadcast(result);
+    Broadcaster.broadcastNoSelf(result, context.channel());
   }
 }

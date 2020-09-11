@@ -22,7 +22,8 @@ public class WhoElseIsHereCmdHandler implements CmdHandler<WhoElseIsHereCmd> {
       // Set move state
       UserMoveState userMoveState = user.getUserMoveState();
       if (null != userMoveState) {
-        WhoElseIsHereResult.UserInfo.MoveState.Builder moveStateBuilder = WhoElseIsHereResult.UserInfo.MoveState.newBuilder()
+        WhoElseIsHereResult.UserInfo.MoveState.Builder moveStateBuilder =
+            WhoElseIsHereResult.UserInfo.MoveState.newBuilder()
                 .setFromPosX(userMoveState.getFromPosX().floatValue())
                 .setFromPosY(userMoveState.getFromPosY().floatValue())
                 .setToPosX(userMoveState.getToPosX().floatValue())

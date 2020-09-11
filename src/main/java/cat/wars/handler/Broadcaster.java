@@ -2,6 +2,7 @@ package cat.wars.handler;
 
 import io.netty.channel.Channel;
 import io.netty.channel.group.ChannelGroup;
+import io.netty.channel.group.ChannelMatchers;
 import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
@@ -13,10 +14,10 @@ import io.netty.util.concurrent.GlobalEventExecutor;
  */
 public final class Broadcaster {
 
-  private static final ChannelGroup CHANNEL_GROUP = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+  private static final ChannelGroup CHANNEL_GROUP =
+      new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
 
-  private Broadcaster() {
-  }
+  private Broadcaster() {}
 
   /**
    * Add channel to group
@@ -44,5 +45,15 @@ public final class Broadcaster {
   public static void broadcast(Object message) {
     if (null == message) return;
     CHANNEL_GROUP.writeAndFlush(message);
+  }
+
+  /**
+   * Broadcast message to all channel(not self)
+   *
+   * @param message Message object
+   */
+  public static void broadcastNoSelf(Object message, Channel selfChannel) {
+    if (null == message) return;
+    CHANNEL_GROUP.writeAndFlush(message, ChannelMatchers.isNot(selfChannel));
   }
 }
