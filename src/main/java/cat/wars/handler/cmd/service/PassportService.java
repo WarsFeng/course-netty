@@ -15,13 +15,9 @@ import java.util.function.Function;
 @Slf4j
 public final class PassportService {
 
-  private static final PassportService instance = new PassportService();
+  @Getter private static final PassportService instance = new PassportService();
 
   private PassportService() {}
-
-  public static PassportService getInstance() {
-    return instance;
-  }
 
   public void login(String username, String password, Function<UserEntity, Void> callback) {
     AsyncOperationProcessor.getInstance()

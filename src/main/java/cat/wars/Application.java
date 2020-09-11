@@ -6,6 +6,7 @@ import cat.wars.handler.MessageHandler;
 import cat.wars.handler.MessageRecognizer;
 import cat.wars.handler.cmd.CmdHandlerFactory;
 import cat.wars.util.MySQLSessionFactory;
+import cat.wars.util.RedisUtil;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -29,6 +30,9 @@ public class Application {
   public static void main(String[] args) {
     CmdHandlerFactory.init();
     MessageRecognizer.init();
+    MySQLSessionFactory.init();
+    RedisUtil.init();
+
     ServerBootstrap server = new ServerBootstrap();
 
     server.group(new NioEventLoopGroup(), new NioEventLoopGroup());
@@ -54,8 +58,6 @@ public class Application {
 
     try {
       ChannelFuture channelFuture = server.bind(12345).sync();
-
-      MySQLSessionFactory.init();
       if (channelFuture.isSuccess()) log.info("Application 启动成功！");
 
       channelFuture.channel().closeFuture().sync();
