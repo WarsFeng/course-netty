@@ -2,6 +2,7 @@ package cat.wars.handler.cmd.service;
 
 import cat.wars.handler.cmd.dao.UserMapper;
 import cat.wars.model.UserEntity;
+import cat.wars.model.user.UserBasicInfo;
 import cat.wars.thread.AsyncOperation;
 import cat.wars.thread.AsyncOperationProcessor;
 import cat.wars.util.MySQLSessionFactory;
@@ -36,12 +37,13 @@ public final class PassportService {
   public void putUserBasicInfoToRedis(UserEntity user) {
     // Put user to redis
     try (Jedis jedis = RedisUtil.getJedis()) {
-      JSONObject json = new JSONObject();
-      json.put("userId", user.getUserId());
-      json.put("userName", user.getUserName());
-      json.put("heroAvatar", user.getHeroAvatar());
+      UserBasicInfo basicInfo = new UserBasicInfo();
+      basicInfo.setUserId(user.getUserId());
+      basicInfo.setUserName(user.getUserName());
+      basicInfo.setHeroAvatar(user.getHeroAvatar());
+      String basicInfoJson = JSONObject.toJSONString(basicInfo);
 
-      jedis.hset("User_" + user.getUserId(), "BasicInfo", json.toJSONString());
+      jedis.hset("User_" + user.getUserId(), "BasicInfo", basicInfoJson);
     } catch (Exception e) {
       log.error(e.getMessage(), e);
       throw new RuntimeException("User basic info put to redis fail!");
