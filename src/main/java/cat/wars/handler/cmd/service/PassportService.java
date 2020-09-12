@@ -5,10 +5,13 @@ import cat.wars.model.UserEntity;
 import cat.wars.thread.AsyncOperation;
 import cat.wars.thread.AsyncOperationProcessor;
 import cat.wars.util.MySQLSessionFactory;
+import cat.wars.util.RedisUtil;
+import com.alibaba.fastjson.JSONObject;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.session.SqlSession;
+import redis.clients.jedis.Jedis;
 
 import java.util.function.Function;
 
@@ -28,6 +31,21 @@ public final class PassportService {
                 callback.apply(this.getUserEntity());
               }
             });
+  }
+
+  public void putUserBasicInfoToRedis(UserEntity user) {
+    // Put user to redis
+    try (Jedis jedis = RedisUtil.getJedis()) {
+      JSONObject json = new JSONObject();
+      json.put("userId", user.getUserId());
+      json.put("userName", user.getUserName());
+      json.put("heroAvatar", user.getHeroAvatar());
+
+      jedis.hset("User_" + user.getUserId(), "BasicInfo", json.toJSONString());
+    } catch (Exception e) {
+      log.error(e.getMessage(), e);
+      throw new RuntimeException("User basic info put to redis fail!");
+    }
   }
 
   @Getter
@@ -69,6 +87,7 @@ public final class PassportService {
         }
 
         userEntity = user;
+        PassportService.getInstance().putUserBasicInfoToRedis(user); // Put user basic info to redis
       } catch (Exception e) {
         log.error(e.getMessage(), e);
       }

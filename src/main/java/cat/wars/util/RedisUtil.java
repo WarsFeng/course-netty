@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-import java.io.FileReader;
 import java.util.Properties;
 
 @Slf4j
@@ -16,12 +15,12 @@ public final class RedisUtil {
   public static void init() {
     Properties prop = new Properties();
     try {
-      prop.load(new FileReader("redis.properties"));
+      prop.load(RedisUtil.class.getClassLoader().getResourceAsStream("redis.properties"));
     } catch (Exception e) {
       log.error(e.getMessage(), e);
       throw new RuntimeException("Redis pool init fail!");
     }
-    pool = new JedisPool(prop.getProperty("host"), (Integer) prop.get("port"));
+    pool = new JedisPool(prop.getProperty("host"), Integer.parseInt(prop.getProperty("port")));
   }
 
   /**
