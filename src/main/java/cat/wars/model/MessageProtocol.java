@@ -83,6 +83,14 @@ public final class MessageProtocol {
      * <code>USER_LOGIN_RESULT = 14;</code>
      */
     USER_LOGIN_RESULT(14),
+    /**
+     * <code>GET_RANK_CMD = 17;</code>
+     */
+    GET_RANK_CMD(17),
+    /**
+     * <code>GET_RANK_RESULT = 18;</code>
+     */
+    GET_RANK_RESULT(18),
     UNRECOGNIZED(-1),
     ;
 
@@ -146,6 +154,14 @@ public final class MessageProtocol {
      * <code>USER_LOGIN_RESULT = 14;</code>
      */
     public static final int USER_LOGIN_RESULT_VALUE = 14;
+    /**
+     * <code>GET_RANK_CMD = 17;</code>
+     */
+    public static final int GET_RANK_CMD_VALUE = 17;
+    /**
+     * <code>GET_RANK_RESULT = 18;</code>
+     */
+    public static final int GET_RANK_RESULT_VALUE = 18;
 
 
     public final int getNumber() {
@@ -187,6 +203,8 @@ public final class MessageProtocol {
         case 12: return USER_DIE_RESULT;
         case 13: return USER_LOGIN_CMD;
         case 14: return USER_LOGIN_RESULT;
+        case 17: return GET_RANK_CMD;
+        case 18: return GET_RANK_RESULT;
         default: return null;
       }
     }
@@ -12262,6 +12280,2404 @@ public final class MessageProtocol {
 
   }
 
+  public interface GetRankCmdOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:msg.GetRankCmd)
+      com.google.protobuf.MessageOrBuilder {
+  }
+  /**
+   * <pre>
+   *
+   * 获取排行榜
+   * /////////////////////////////////////////////////////////////////////
+   * 指令
+   * </pre>
+   *
+   * Protobuf type {@code msg.GetRankCmd}
+   */
+  public  static final class GetRankCmd extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:msg.GetRankCmd)
+      GetRankCmdOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetRankCmd.newBuilder() to construct.
+    private GetRankCmd(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetRankCmd() {
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRankCmd();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetRankCmd(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cat.wars.model.MessageProtocol.internal_static_msg_GetRankCmd_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cat.wars.model.MessageProtocol.internal_static_msg_GetRankCmd_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cat.wars.model.MessageProtocol.GetRankCmd.class, cat.wars.model.MessageProtocol.GetRankCmd.Builder.class);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cat.wars.model.MessageProtocol.GetRankCmd)) {
+        return super.equals(obj);
+      }
+      cat.wars.model.MessageProtocol.GetRankCmd other = (cat.wars.model.MessageProtocol.GetRankCmd) obj;
+
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankCmd parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cat.wars.model.MessageProtocol.GetRankCmd prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *
+     * 获取排行榜
+     * /////////////////////////////////////////////////////////////////////
+     * 指令
+     * </pre>
+     *
+     * Protobuf type {@code msg.GetRankCmd}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:msg.GetRankCmd)
+        cat.wars.model.MessageProtocol.GetRankCmdOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankCmd_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankCmd_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cat.wars.model.MessageProtocol.GetRankCmd.class, cat.wars.model.MessageProtocol.GetRankCmd.Builder.class);
+      }
+
+      // Construct using cat.wars.model.MessageProtocol.GetRankCmd.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankCmd_descriptor;
+      }
+
+      @java.lang.Override
+      public cat.wars.model.MessageProtocol.GetRankCmd getDefaultInstanceForType() {
+        return cat.wars.model.MessageProtocol.GetRankCmd.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public cat.wars.model.MessageProtocol.GetRankCmd build() {
+        cat.wars.model.MessageProtocol.GetRankCmd result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public cat.wars.model.MessageProtocol.GetRankCmd buildPartial() {
+        cat.wars.model.MessageProtocol.GetRankCmd result = new cat.wars.model.MessageProtocol.GetRankCmd(this);
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cat.wars.model.MessageProtocol.GetRankCmd) {
+          return mergeFrom((cat.wars.model.MessageProtocol.GetRankCmd)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cat.wars.model.MessageProtocol.GetRankCmd other) {
+        if (other == cat.wars.model.MessageProtocol.GetRankCmd.getDefaultInstance()) return this;
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cat.wars.model.MessageProtocol.GetRankCmd parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cat.wars.model.MessageProtocol.GetRankCmd) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:msg.GetRankCmd)
+    }
+
+    // @@protoc_insertion_point(class_scope:msg.GetRankCmd)
+    private static final cat.wars.model.MessageProtocol.GetRankCmd DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cat.wars.model.MessageProtocol.GetRankCmd();
+    }
+
+    public static cat.wars.model.MessageProtocol.GetRankCmd getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetRankCmd>
+        PARSER = new com.google.protobuf.AbstractParser<GetRankCmd>() {
+      @java.lang.Override
+      public GetRankCmd parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetRankCmd(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetRankCmd> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetRankCmd> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public cat.wars.model.MessageProtocol.GetRankCmd getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface GetRankResultOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:msg.GetRankResult)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    java.util.List<cat.wars.model.MessageProtocol.GetRankResult.RankItem> 
+        getRankItemList();
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    cat.wars.model.MessageProtocol.GetRankResult.RankItem getRankItem(int index);
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    int getRankItemCount();
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    java.util.List<? extends cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder> 
+        getRankItemOrBuilderList();
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder getRankItemOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   * 结果
+   * </pre>
+   *
+   * Protobuf type {@code msg.GetRankResult}
+   */
+  public  static final class GetRankResult extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:msg.GetRankResult)
+      GetRankResultOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use GetRankResult.newBuilder() to construct.
+    private GetRankResult(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private GetRankResult() {
+      rankItem_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new GetRankResult();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private GetRankResult(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                rankItem_ = new java.util.ArrayList<cat.wars.model.MessageProtocol.GetRankResult.RankItem>();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              rankItem_.add(
+                  input.readMessage(cat.wars.model.MessageProtocol.GetRankResult.RankItem.parser(), extensionRegistry));
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          rankItem_ = java.util.Collections.unmodifiableList(rankItem_);
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cat.wars.model.MessageProtocol.GetRankResult.class, cat.wars.model.MessageProtocol.GetRankResult.Builder.class);
+    }
+
+    public interface RankItemOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:msg.GetRankResult.RankItem)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <pre>
+       * 排名 Id
+       * </pre>
+       *
+       * <code>uint32 rankId = 1;</code>
+       * @return The rankId.
+       */
+      int getRankId();
+
+      /**
+       * <pre>
+       * 用户 Id
+       * </pre>
+       *
+       * <code>uint32 userId = 2;</code>
+       * @return The userId.
+       */
+      int getUserId();
+
+      /**
+       * <pre>
+       * 用户名称
+       * </pre>
+       *
+       * <code>string userName = 3;</code>
+       * @return The userName.
+       */
+      java.lang.String getUserName();
+      /**
+       * <pre>
+       * 用户名称
+       * </pre>
+       *
+       * <code>string userName = 3;</code>
+       * @return The bytes for userName.
+       */
+      com.google.protobuf.ByteString
+          getUserNameBytes();
+
+      /**
+       * <pre>
+       * 英雄形象
+       * </pre>
+       *
+       * <code>string heroAvatar = 4;</code>
+       * @return The heroAvatar.
+       */
+      java.lang.String getHeroAvatar();
+      /**
+       * <pre>
+       * 英雄形象
+       * </pre>
+       *
+       * <code>string heroAvatar = 4;</code>
+       * @return The bytes for heroAvatar.
+       */
+      com.google.protobuf.ByteString
+          getHeroAvatarBytes();
+
+      /**
+       * <pre>
+       * 胜利次数
+       * </pre>
+       *
+       * <code>uint32 win = 5;</code>
+       * @return The win.
+       */
+      int getWin();
+    }
+    /**
+     * <pre>
+     * 用户信息
+     * </pre>
+     *
+     * Protobuf type {@code msg.GetRankResult.RankItem}
+     */
+    public  static final class RankItem extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:msg.GetRankResult.RankItem)
+        RankItemOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use RankItem.newBuilder() to construct.
+      private RankItem(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private RankItem() {
+        userName_ = "";
+        heroAvatar_ = "";
+      }
+
+      @java.lang.Override
+      @SuppressWarnings({"unused"})
+      protected java.lang.Object newInstance(
+          UnusedPrivateParameter unused) {
+        return new RankItem();
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private RankItem(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+
+                rankId_ = input.readUInt32();
+                break;
+              }
+              case 16: {
+
+                userId_ = input.readUInt32();
+                break;
+              }
+              case 26: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                userName_ = s;
+                break;
+              }
+              case 34: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                heroAvatar_ = s;
+                break;
+              }
+              case 40: {
+
+                win_ = input.readUInt32();
+                break;
+              }
+              default: {
+                if (!parseUnknownField(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_RankItem_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_RankItem_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cat.wars.model.MessageProtocol.GetRankResult.RankItem.class, cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder.class);
+      }
+
+      public static final int RANKID_FIELD_NUMBER = 1;
+      private int rankId_;
+      /**
+       * <pre>
+       * 排名 Id
+       * </pre>
+       *
+       * <code>uint32 rankId = 1;</code>
+       * @return The rankId.
+       */
+      public int getRankId() {
+        return rankId_;
+      }
+
+      public static final int USERID_FIELD_NUMBER = 2;
+      private int userId_;
+      /**
+       * <pre>
+       * 用户 Id
+       * </pre>
+       *
+       * <code>uint32 userId = 2;</code>
+       * @return The userId.
+       */
+      public int getUserId() {
+        return userId_;
+      }
+
+      public static final int USERNAME_FIELD_NUMBER = 3;
+      private volatile java.lang.Object userName_;
+      /**
+       * <pre>
+       * 用户名称
+       * </pre>
+       *
+       * <code>string userName = 3;</code>
+       * @return The userName.
+       */
+      public java.lang.String getUserName() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          userName_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * 用户名称
+       * </pre>
+       *
+       * <code>string userName = 3;</code>
+       * @return The bytes for userName.
+       */
+      public com.google.protobuf.ByteString
+          getUserNameBytes() {
+        java.lang.Object ref = userName_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          userName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int HEROAVATAR_FIELD_NUMBER = 4;
+      private volatile java.lang.Object heroAvatar_;
+      /**
+       * <pre>
+       * 英雄形象
+       * </pre>
+       *
+       * <code>string heroAvatar = 4;</code>
+       * @return The heroAvatar.
+       */
+      public java.lang.String getHeroAvatar() {
+        java.lang.Object ref = heroAvatar_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          heroAvatar_ = s;
+          return s;
+        }
+      }
+      /**
+       * <pre>
+       * 英雄形象
+       * </pre>
+       *
+       * <code>string heroAvatar = 4;</code>
+       * @return The bytes for heroAvatar.
+       */
+      public com.google.protobuf.ByteString
+          getHeroAvatarBytes() {
+        java.lang.Object ref = heroAvatar_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          heroAvatar_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int WIN_FIELD_NUMBER = 5;
+      private int win_;
+      /**
+       * <pre>
+       * 胜利次数
+       * </pre>
+       *
+       * <code>uint32 win = 5;</code>
+       * @return The win.
+       */
+      public int getWin() {
+        return win_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      @java.lang.Override
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      @java.lang.Override
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (rankId_ != 0) {
+          output.writeUInt32(1, rankId_);
+        }
+        if (userId_ != 0) {
+          output.writeUInt32(2, userId_);
+        }
+        if (!getUserNameBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 3, userName_);
+        }
+        if (!getHeroAvatarBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 4, heroAvatar_);
+        }
+        if (win_ != 0) {
+          output.writeUInt32(5, win_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      @java.lang.Override
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (rankId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(1, rankId_);
+        }
+        if (userId_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(2, userId_);
+        }
+        if (!getUserNameBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, userName_);
+        }
+        if (!getHeroAvatarBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, heroAvatar_);
+        }
+        if (win_ != 0) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeUInt32Size(5, win_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof cat.wars.model.MessageProtocol.GetRankResult.RankItem)) {
+          return super.equals(obj);
+        }
+        cat.wars.model.MessageProtocol.GetRankResult.RankItem other = (cat.wars.model.MessageProtocol.GetRankResult.RankItem) obj;
+
+        if (getRankId()
+            != other.getRankId()) return false;
+        if (getUserId()
+            != other.getUserId()) return false;
+        if (!getUserName()
+            .equals(other.getUserName())) return false;
+        if (!getHeroAvatar()
+            .equals(other.getHeroAvatar())) return false;
+        if (getWin()
+            != other.getWin()) return false;
+        if (!unknownFields.equals(other.unknownFields)) return false;
+        return true;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + RANKID_FIELD_NUMBER;
+        hash = (53 * hash) + getRankId();
+        hash = (37 * hash) + USERID_FIELD_NUMBER;
+        hash = (53 * hash) + getUserId();
+        hash = (37 * hash) + USERNAME_FIELD_NUMBER;
+        hash = (53 * hash) + getUserName().hashCode();
+        hash = (37 * hash) + HEROAVATAR_FIELD_NUMBER;
+        hash = (53 * hash) + getHeroAvatar().hashCode();
+        hash = (37 * hash) + WIN_FIELD_NUMBER;
+        hash = (53 * hash) + getWin();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      @java.lang.Override
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(cat.wars.model.MessageProtocol.GetRankResult.RankItem prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      @java.lang.Override
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * <pre>
+       * 用户信息
+       * </pre>
+       *
+       * Protobuf type {@code msg.GetRankResult.RankItem}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:msg.GetRankResult.RankItem)
+          cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_RankItem_descriptor;
+        }
+
+        @java.lang.Override
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_RankItem_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  cat.wars.model.MessageProtocol.GetRankResult.RankItem.class, cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder.class);
+        }
+
+        // Construct using cat.wars.model.MessageProtocol.GetRankResult.RankItem.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        @java.lang.Override
+        public Builder clear() {
+          super.clear();
+          rankId_ = 0;
+
+          userId_ = 0;
+
+          userName_ = "";
+
+          heroAvatar_ = "";
+
+          win_ = 0;
+
+          return this;
+        }
+
+        @java.lang.Override
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_RankItem_descriptor;
+        }
+
+        @java.lang.Override
+        public cat.wars.model.MessageProtocol.GetRankResult.RankItem getDefaultInstanceForType() {
+          return cat.wars.model.MessageProtocol.GetRankResult.RankItem.getDefaultInstance();
+        }
+
+        @java.lang.Override
+        public cat.wars.model.MessageProtocol.GetRankResult.RankItem build() {
+          cat.wars.model.MessageProtocol.GetRankResult.RankItem result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        @java.lang.Override
+        public cat.wars.model.MessageProtocol.GetRankResult.RankItem buildPartial() {
+          cat.wars.model.MessageProtocol.GetRankResult.RankItem result = new cat.wars.model.MessageProtocol.GetRankResult.RankItem(this);
+          result.rankId_ = rankId_;
+          result.userId_ = userId_;
+          result.userName_ = userName_;
+          result.heroAvatar_ = heroAvatar_;
+          result.win_ = win_;
+          onBuilt();
+          return result;
+        }
+
+        @java.lang.Override
+        public Builder clone() {
+          return super.clone();
+        }
+        @java.lang.Override
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.setField(field, value);
+        }
+        @java.lang.Override
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return super.clearField(field);
+        }
+        @java.lang.Override
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return super.clearOneof(oneof);
+        }
+        @java.lang.Override
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return super.setRepeatedField(field, index, value);
+        }
+        @java.lang.Override
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return super.addRepeatedField(field, value);
+        }
+        @java.lang.Override
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof cat.wars.model.MessageProtocol.GetRankResult.RankItem) {
+            return mergeFrom((cat.wars.model.MessageProtocol.GetRankResult.RankItem)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(cat.wars.model.MessageProtocol.GetRankResult.RankItem other) {
+          if (other == cat.wars.model.MessageProtocol.GetRankResult.RankItem.getDefaultInstance()) return this;
+          if (other.getRankId() != 0) {
+            setRankId(other.getRankId());
+          }
+          if (other.getUserId() != 0) {
+            setUserId(other.getUserId());
+          }
+          if (!other.getUserName().isEmpty()) {
+            userName_ = other.userName_;
+            onChanged();
+          }
+          if (!other.getHeroAvatar().isEmpty()) {
+            heroAvatar_ = other.heroAvatar_;
+            onChanged();
+          }
+          if (other.getWin() != 0) {
+            setWin(other.getWin());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        @java.lang.Override
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        @java.lang.Override
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          cat.wars.model.MessageProtocol.GetRankResult.RankItem parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (cat.wars.model.MessageProtocol.GetRankResult.RankItem) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private int rankId_ ;
+        /**
+         * <pre>
+         * 排名 Id
+         * </pre>
+         *
+         * <code>uint32 rankId = 1;</code>
+         * @return The rankId.
+         */
+        public int getRankId() {
+          return rankId_;
+        }
+        /**
+         * <pre>
+         * 排名 Id
+         * </pre>
+         *
+         * <code>uint32 rankId = 1;</code>
+         * @param value The rankId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setRankId(int value) {
+          
+          rankId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 排名 Id
+         * </pre>
+         *
+         * <code>uint32 rankId = 1;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearRankId() {
+          
+          rankId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private int userId_ ;
+        /**
+         * <pre>
+         * 用户 Id
+         * </pre>
+         *
+         * <code>uint32 userId = 2;</code>
+         * @return The userId.
+         */
+        public int getUserId() {
+          return userId_;
+        }
+        /**
+         * <pre>
+         * 用户 Id
+         * </pre>
+         *
+         * <code>uint32 userId = 2;</code>
+         * @param value The userId to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserId(int value) {
+          
+          userId_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 用户 Id
+         * </pre>
+         *
+         * <code>uint32 userId = 2;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserId() {
+          
+          userId_ = 0;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object userName_ = "";
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>string userName = 3;</code>
+         * @return The userName.
+         */
+        public java.lang.String getUserName() {
+          java.lang.Object ref = userName_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            userName_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>string userName = 3;</code>
+         * @return The bytes for userName.
+         */
+        public com.google.protobuf.ByteString
+            getUserNameBytes() {
+          java.lang.Object ref = userName_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            userName_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>string userName = 3;</code>
+         * @param value The userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserName(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          userName_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>string userName = 3;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearUserName() {
+          
+          userName_ = getDefaultInstance().getUserName();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 用户名称
+         * </pre>
+         *
+         * <code>string userName = 3;</code>
+         * @param value The bytes for userName to set.
+         * @return This builder for chaining.
+         */
+        public Builder setUserNameBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          userName_ = value;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object heroAvatar_ = "";
+        /**
+         * <pre>
+         * 英雄形象
+         * </pre>
+         *
+         * <code>string heroAvatar = 4;</code>
+         * @return The heroAvatar.
+         */
+        public java.lang.String getHeroAvatar() {
+          java.lang.Object ref = heroAvatar_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            heroAvatar_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <pre>
+         * 英雄形象
+         * </pre>
+         *
+         * <code>string heroAvatar = 4;</code>
+         * @return The bytes for heroAvatar.
+         */
+        public com.google.protobuf.ByteString
+            getHeroAvatarBytes() {
+          java.lang.Object ref = heroAvatar_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            heroAvatar_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <pre>
+         * 英雄形象
+         * </pre>
+         *
+         * <code>string heroAvatar = 4;</code>
+         * @param value The heroAvatar to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHeroAvatar(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          heroAvatar_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 英雄形象
+         * </pre>
+         *
+         * <code>string heroAvatar = 4;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearHeroAvatar() {
+          
+          heroAvatar_ = getDefaultInstance().getHeroAvatar();
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 英雄形象
+         * </pre>
+         *
+         * <code>string heroAvatar = 4;</code>
+         * @param value The bytes for heroAvatar to set.
+         * @return This builder for chaining.
+         */
+        public Builder setHeroAvatarBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          heroAvatar_ = value;
+          onChanged();
+          return this;
+        }
+
+        private int win_ ;
+        /**
+         * <pre>
+         * 胜利次数
+         * </pre>
+         *
+         * <code>uint32 win = 5;</code>
+         * @return The win.
+         */
+        public int getWin() {
+          return win_;
+        }
+        /**
+         * <pre>
+         * 胜利次数
+         * </pre>
+         *
+         * <code>uint32 win = 5;</code>
+         * @param value The win to set.
+         * @return This builder for chaining.
+         */
+        public Builder setWin(int value) {
+          
+          win_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <pre>
+         * 胜利次数
+         * </pre>
+         *
+         * <code>uint32 win = 5;</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearWin() {
+          
+          win_ = 0;
+          onChanged();
+          return this;
+        }
+        @java.lang.Override
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFields(unknownFields);
+        }
+
+        @java.lang.Override
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:msg.GetRankResult.RankItem)
+      }
+
+      // @@protoc_insertion_point(class_scope:msg.GetRankResult.RankItem)
+      private static final cat.wars.model.MessageProtocol.GetRankResult.RankItem DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new cat.wars.model.MessageProtocol.GetRankResult.RankItem();
+      }
+
+      public static cat.wars.model.MessageProtocol.GetRankResult.RankItem getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<RankItem>
+          PARSER = new com.google.protobuf.AbstractParser<RankItem>() {
+        @java.lang.Override
+        public RankItem parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new RankItem(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<RankItem> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<RankItem> getParserForType() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public cat.wars.model.MessageProtocol.GetRankResult.RankItem getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public static final int RANKITEM_FIELD_NUMBER = 1;
+    private java.util.List<cat.wars.model.MessageProtocol.GetRankResult.RankItem> rankItem_;
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    public java.util.List<cat.wars.model.MessageProtocol.GetRankResult.RankItem> getRankItemList() {
+      return rankItem_;
+    }
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    public java.util.List<? extends cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder> 
+        getRankItemOrBuilderList() {
+      return rankItem_;
+    }
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    public int getRankItemCount() {
+      return rankItem_.size();
+    }
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    public cat.wars.model.MessageProtocol.GetRankResult.RankItem getRankItem(int index) {
+      return rankItem_.get(index);
+    }
+    /**
+     * <pre>
+     * 排名条目
+     * </pre>
+     *
+     * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+     */
+    public cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder getRankItemOrBuilder(
+        int index) {
+      return rankItem_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < rankItem_.size(); i++) {
+        output.writeMessage(1, rankItem_.get(i));
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < rankItem_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, rankItem_.get(i));
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cat.wars.model.MessageProtocol.GetRankResult)) {
+        return super.equals(obj);
+      }
+      cat.wars.model.MessageProtocol.GetRankResult other = (cat.wars.model.MessageProtocol.GetRankResult) obj;
+
+      if (!getRankItemList()
+          .equals(other.getRankItemList())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getRankItemCount() > 0) {
+        hash = (37 * hash) + RANKITEM_FIELD_NUMBER;
+        hash = (53 * hash) + getRankItemList().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static cat.wars.model.MessageProtocol.GetRankResult parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cat.wars.model.MessageProtocol.GetRankResult prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * 结果
+     * </pre>
+     *
+     * Protobuf type {@code msg.GetRankResult}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:msg.GetRankResult)
+        cat.wars.model.MessageProtocol.GetRankResultOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cat.wars.model.MessageProtocol.GetRankResult.class, cat.wars.model.MessageProtocol.GetRankResult.Builder.class);
+      }
+
+      // Construct using cat.wars.model.MessageProtocol.GetRankResult.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+          getRankItemFieldBuilder();
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (rankItemBuilder_ == null) {
+          rankItem_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          rankItemBuilder_.clear();
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cat.wars.model.MessageProtocol.internal_static_msg_GetRankResult_descriptor;
+      }
+
+      @java.lang.Override
+      public cat.wars.model.MessageProtocol.GetRankResult getDefaultInstanceForType() {
+        return cat.wars.model.MessageProtocol.GetRankResult.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public cat.wars.model.MessageProtocol.GetRankResult build() {
+        cat.wars.model.MessageProtocol.GetRankResult result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public cat.wars.model.MessageProtocol.GetRankResult buildPartial() {
+        cat.wars.model.MessageProtocol.GetRankResult result = new cat.wars.model.MessageProtocol.GetRankResult(this);
+        int from_bitField0_ = bitField0_;
+        if (rankItemBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            rankItem_ = java.util.Collections.unmodifiableList(rankItem_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.rankItem_ = rankItem_;
+        } else {
+          result.rankItem_ = rankItemBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cat.wars.model.MessageProtocol.GetRankResult) {
+          return mergeFrom((cat.wars.model.MessageProtocol.GetRankResult)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cat.wars.model.MessageProtocol.GetRankResult other) {
+        if (other == cat.wars.model.MessageProtocol.GetRankResult.getDefaultInstance()) return this;
+        if (rankItemBuilder_ == null) {
+          if (!other.rankItem_.isEmpty()) {
+            if (rankItem_.isEmpty()) {
+              rankItem_ = other.rankItem_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureRankItemIsMutable();
+              rankItem_.addAll(other.rankItem_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.rankItem_.isEmpty()) {
+            if (rankItemBuilder_.isEmpty()) {
+              rankItemBuilder_.dispose();
+              rankItemBuilder_ = null;
+              rankItem_ = other.rankItem_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              rankItemBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getRankItemFieldBuilder() : null;
+            } else {
+              rankItemBuilder_.addAllMessages(other.rankItem_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        cat.wars.model.MessageProtocol.GetRankResult parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (cat.wars.model.MessageProtocol.GetRankResult) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<cat.wars.model.MessageProtocol.GetRankResult.RankItem> rankItem_ =
+        java.util.Collections.emptyList();
+      private void ensureRankItemIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          rankItem_ = new java.util.ArrayList<cat.wars.model.MessageProtocol.GetRankResult.RankItem>(rankItem_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          cat.wars.model.MessageProtocol.GetRankResult.RankItem, cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder, cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder> rankItemBuilder_;
+
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public java.util.List<cat.wars.model.MessageProtocol.GetRankResult.RankItem> getRankItemList() {
+        if (rankItemBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(rankItem_);
+        } else {
+          return rankItemBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public int getRankItemCount() {
+        if (rankItemBuilder_ == null) {
+          return rankItem_.size();
+        } else {
+          return rankItemBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public cat.wars.model.MessageProtocol.GetRankResult.RankItem getRankItem(int index) {
+        if (rankItemBuilder_ == null) {
+          return rankItem_.get(index);
+        } else {
+          return rankItemBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder setRankItem(
+          int index, cat.wars.model.MessageProtocol.GetRankResult.RankItem value) {
+        if (rankItemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRankItemIsMutable();
+          rankItem_.set(index, value);
+          onChanged();
+        } else {
+          rankItemBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder setRankItem(
+          int index, cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder builderForValue) {
+        if (rankItemBuilder_ == null) {
+          ensureRankItemIsMutable();
+          rankItem_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          rankItemBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder addRankItem(cat.wars.model.MessageProtocol.GetRankResult.RankItem value) {
+        if (rankItemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRankItemIsMutable();
+          rankItem_.add(value);
+          onChanged();
+        } else {
+          rankItemBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder addRankItem(
+          int index, cat.wars.model.MessageProtocol.GetRankResult.RankItem value) {
+        if (rankItemBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureRankItemIsMutable();
+          rankItem_.add(index, value);
+          onChanged();
+        } else {
+          rankItemBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder addRankItem(
+          cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder builderForValue) {
+        if (rankItemBuilder_ == null) {
+          ensureRankItemIsMutable();
+          rankItem_.add(builderForValue.build());
+          onChanged();
+        } else {
+          rankItemBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder addRankItem(
+          int index, cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder builderForValue) {
+        if (rankItemBuilder_ == null) {
+          ensureRankItemIsMutable();
+          rankItem_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          rankItemBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder addAllRankItem(
+          java.lang.Iterable<? extends cat.wars.model.MessageProtocol.GetRankResult.RankItem> values) {
+        if (rankItemBuilder_ == null) {
+          ensureRankItemIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, rankItem_);
+          onChanged();
+        } else {
+          rankItemBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder clearRankItem() {
+        if (rankItemBuilder_ == null) {
+          rankItem_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          rankItemBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public Builder removeRankItem(int index) {
+        if (rankItemBuilder_ == null) {
+          ensureRankItemIsMutable();
+          rankItem_.remove(index);
+          onChanged();
+        } else {
+          rankItemBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder getRankItemBuilder(
+          int index) {
+        return getRankItemFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder getRankItemOrBuilder(
+          int index) {
+        if (rankItemBuilder_ == null) {
+          return rankItem_.get(index);  } else {
+          return rankItemBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public java.util.List<? extends cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder> 
+           getRankItemOrBuilderList() {
+        if (rankItemBuilder_ != null) {
+          return rankItemBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(rankItem_);
+        }
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder addRankItemBuilder() {
+        return getRankItemFieldBuilder().addBuilder(
+            cat.wars.model.MessageProtocol.GetRankResult.RankItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder addRankItemBuilder(
+          int index) {
+        return getRankItemFieldBuilder().addBuilder(
+            index, cat.wars.model.MessageProtocol.GetRankResult.RankItem.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * 排名条目
+       * </pre>
+       *
+       * <code>repeated .msg.GetRankResult.RankItem rankItem = 1;</code>
+       */
+      public java.util.List<cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder> 
+           getRankItemBuilderList() {
+        return getRankItemFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          cat.wars.model.MessageProtocol.GetRankResult.RankItem, cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder, cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder> 
+          getRankItemFieldBuilder() {
+        if (rankItemBuilder_ == null) {
+          rankItemBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              cat.wars.model.MessageProtocol.GetRankResult.RankItem, cat.wars.model.MessageProtocol.GetRankResult.RankItem.Builder, cat.wars.model.MessageProtocol.GetRankResult.RankItemOrBuilder>(
+                  rankItem_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          rankItem_ = null;
+        }
+        return rankItemBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:msg.GetRankResult)
+    }
+
+    // @@protoc_insertion_point(class_scope:msg.GetRankResult)
+    private static final cat.wars.model.MessageProtocol.GetRankResult DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cat.wars.model.MessageProtocol.GetRankResult();
+    }
+
+    public static cat.wars.model.MessageProtocol.GetRankResult getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<GetRankResult>
+        PARSER = new com.google.protobuf.AbstractParser<GetRankResult>() {
+      @java.lang.Override
+      public GetRankResult parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new GetRankResult(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<GetRankResult> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<GetRankResult> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public cat.wars.model.MessageProtocol.GetRankResult getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_msg_UserEntryCmd_descriptor;
   private static final 
@@ -12347,6 +14763,21 @@ public final class MessageProtocol {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_msg_UserLoginResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_msg_GetRankCmd_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_msg_GetRankCmd_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_msg_GetRankResult_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_msg_GetRankResult_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_msg_GetRankResult_RankItem_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_msg_GetRankResult_RankItem_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -12384,17 +14815,22 @@ public final class MessageProtocol {
       "Result\022\024\n\014targetUserId\030\001 \001(\r\"2\n\014UserLogi" +
       "nCmd\022\020\n\010userName\030\001 \001(\t\022\020\n\010password\030\002 \001(\t" +
       "\"G\n\017UserLoginResult\022\016\n\006userId\030\001 \001(\r\022\020\n\010u" +
-      "serName\030\002 \001(\t\022\022\n\nheroAvatar\030\003 \001(\t*\337\002\n\007Ms" +
-      "gCode\022\022\n\016USER_ENTRY_CMD\020\000\022\025\n\021USER_ENTRY_" +
-      "RESULT\020\001\022\030\n\024WHO_ELSE_IS_HERE_CMD\020\002\022\033\n\027WH" +
-      "O_ELSE_IS_HERE_RESULT\020\003\022\024\n\020USER_MOVE_TO_" +
-      "CMD\020\004\022\027\n\023USER_MOVE_TO_RESULT\020\005\022\024\n\020USER_Q" +
-      "UIT_RESULT\020\006\022\021\n\rUSER_STOP_CMD\020\007\022\024\n\020USER_" +
-      "STOP_RESULT\020\010\022\021\n\rUSER_ATTK_CMD\020\t\022\024\n\020USER" +
-      "_ATTK_RESULT\020\n\022\033\n\027USER_SUBTRACT_HP_RESUL" +
-      "T\020\013\022\023\n\017USER_DIE_RESULT\020\014\022\022\n\016USER_LOGIN_C" +
-      "MD\020\r\022\025\n\021USER_LOGIN_RESULT\020\016B\020\n\016cat.wars." +
-      "modelb\006proto3"
+      "serName\030\002 \001(\t\022\022\n\nheroAvatar\030\003 \001(\t\"\014\n\nGet" +
+      "RankCmd\"\235\001\n\rGetRankResult\022-\n\010rankItem\030\001 " +
+      "\003(\0132\033.msg.GetRankResult.RankItem\032]\n\010Rank" +
+      "Item\022\016\n\006rankId\030\001 \001(\r\022\016\n\006userId\030\002 \001(\r\022\020\n\010" +
+      "userName\030\003 \001(\t\022\022\n\nheroAvatar\030\004 \001(\t\022\013\n\003wi" +
+      "n\030\005 \001(\r*\206\003\n\007MsgCode\022\022\n\016USER_ENTRY_CMD\020\000\022" +
+      "\025\n\021USER_ENTRY_RESULT\020\001\022\030\n\024WHO_ELSE_IS_HE" +
+      "RE_CMD\020\002\022\033\n\027WHO_ELSE_IS_HERE_RESULT\020\003\022\024\n" +
+      "\020USER_MOVE_TO_CMD\020\004\022\027\n\023USER_MOVE_TO_RESU" +
+      "LT\020\005\022\024\n\020USER_QUIT_RESULT\020\006\022\021\n\rUSER_STOP_" +
+      "CMD\020\007\022\024\n\020USER_STOP_RESULT\020\010\022\021\n\rUSER_ATTK" +
+      "_CMD\020\t\022\024\n\020USER_ATTK_RESULT\020\n\022\033\n\027USER_SUB" +
+      "TRACT_HP_RESULT\020\013\022\023\n\017USER_DIE_RESULT\020\014\022\022" +
+      "\n\016USER_LOGIN_CMD\020\r\022\025\n\021USER_LOGIN_RESULT\020" +
+      "\016\022\020\n\014GET_RANK_CMD\020\021\022\023\n\017GET_RANK_RESULT\020\022" +
+      "B\020\n\016cat.wars.modelb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -12502,6 +14938,24 @@ public final class MessageProtocol {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_msg_UserLoginResult_descriptor,
         new java.lang.String[] { "UserId", "UserName", "HeroAvatar", });
+    internal_static_msg_GetRankCmd_descriptor =
+      getDescriptor().getMessageTypes().get(15);
+    internal_static_msg_GetRankCmd_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_msg_GetRankCmd_descriptor,
+        new java.lang.String[] { });
+    internal_static_msg_GetRankResult_descriptor =
+      getDescriptor().getMessageTypes().get(16);
+    internal_static_msg_GetRankResult_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_msg_GetRankResult_descriptor,
+        new java.lang.String[] { "RankItem", });
+    internal_static_msg_GetRankResult_RankItem_descriptor =
+      internal_static_msg_GetRankResult_descriptor.getNestedTypes().get(0);
+    internal_static_msg_GetRankResult_RankItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_msg_GetRankResult_RankItem_descriptor,
+        new java.lang.String[] { "RankId", "UserId", "UserName", "HeroAvatar", "Win", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
