@@ -40,6 +40,7 @@ public class PassportCmdHandler implements CmdHandler<UserLoginCmd> {
           userSession.setHeroAvatar(userEntity.getHeroAvatar());
           userSession.setTotalHP(100);
           userSession.setCurrHP(100);
+          userSession.setLiving(true);
           UserManager.addUser(userSession); // Add to user map
 
           UserLoginResult result =

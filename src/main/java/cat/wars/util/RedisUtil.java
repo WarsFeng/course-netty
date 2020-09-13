@@ -18,7 +18,6 @@ public final class RedisUtil {
       prop.load(RedisUtil.class.getClassLoader().getResourceAsStream("redis.properties"));
     } catch (Exception e) {
       log.error(e.getMessage(), e);
-      throw new RuntimeException("Redis pool init fail!");
     }
     pool = new JedisPool(prop.getProperty("host"), Integer.parseInt(prop.getProperty("port")));
   }

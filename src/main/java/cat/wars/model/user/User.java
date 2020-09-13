@@ -30,4 +30,7 @@ public class User {
 
   /** 用户总血量 */
   private int totalHP;
+
+  /** 活着的 */
+  private boolean living;
 }

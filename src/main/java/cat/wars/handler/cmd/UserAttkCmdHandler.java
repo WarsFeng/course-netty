@@ -4,6 +4,8 @@ import cat.wars.handler.Broadcaster;
 import cat.wars.model.MessageProtocol;
 import cat.wars.model.user.User;
 import cat.wars.model.user.UserManager;
+import cat.wars.mq.message.RankKillUserMessage;
+import cat.wars.mq.producer.MQProducer;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.AttributeKey;
 
@@ -24,12 +26,18 @@ public class UserAttkCmdHandler implements CmdHandler<MessageProtocol.UserAttkCm
 
     int targetHP = targetUser.getCurrHP() - 10;
     targetUser.setCurrHP(targetHP);
-    if (0 >= (targetHP)) {
+    if (0 >= (targetHP) && targetUser.isLiving()) {
       MessageProtocol.UserDieResult userDieResult =
           MessageProtocol.UserDieResult.newBuilder()
               .setTargetUserId(targetUser.getUserId())
               .build();
       Broadcaster.broadcast(userDieResult);
+
+      targetUser.setLiving(false);
+      RankKillUserMessage killedMessage = new RankKillUserMessage();
+      killedMessage.setWinnerUserId(userId);
+      killedMessage.setLoserUserId(cmd.getTargetUserId());
+      MQProducer.sendMessage("Killed", killedMessage);
     }
 
     MessageProtocol.UserAttkResult userAttkResult =

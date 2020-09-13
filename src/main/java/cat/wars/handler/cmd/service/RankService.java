@@ -35,6 +35,15 @@ public final class RankService {
     AsyncOperationProcessor.getInstance().submit(asyncGetRank);
   }
 
+  public void refreshRank(int winnerUserId, int loserUserId) {
+    try (Jedis jedis = RedisUtil.getJedis()) {
+      Long winNumber = jedis.hincrBy("User" + winnerUserId, "Win", 1);
+      jedis.zadd("Rank", winNumber, String.valueOf(winnerUserId));
+    } catch (Exception e) {
+      log.error(e.getMessage(), e);
+    }
+  }
+
   private static class AsyncGetRank implements AsyncOperation {
 
     @Getter private final List<RankItem> rankItems = new ArrayList<>();

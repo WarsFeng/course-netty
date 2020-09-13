@@ -5,6 +5,7 @@ import cat.wars.handler.MessageEncoder;
 import cat.wars.handler.MessageHandler;
 import cat.wars.handler.MessageRecognizer;
 import cat.wars.handler.cmd.CmdHandlerFactory;
+import cat.wars.mq.producer.MQProducer;
 import cat.wars.util.MySQLSessionFactory;
 import cat.wars.util.RedisUtil;
 import io.netty.bootstrap.ServerBootstrap;
@@ -32,6 +33,7 @@ public class Application {
     MessageRecognizer.init();
     MySQLSessionFactory.init();
     RedisUtil.init();
+    MQProducer.init();
 
     ServerBootstrap server = new ServerBootstrap();
 
